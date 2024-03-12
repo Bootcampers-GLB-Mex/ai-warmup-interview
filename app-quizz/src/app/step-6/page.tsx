@@ -9,11 +9,11 @@ export default function StepSix() {
   const bodyContainerStyles =
     "md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100 pb-20";
 
-  const handleClick = (option: number) => {
+  const handlerClick = (option: number) => {
     console.log("option ", option);
   };
 
-  const handleButton = () => {
+  const handlerButton = () => {
     console.log("click");
   };
 
@@ -29,11 +29,14 @@ export default function StepSix() {
         </div>
         <div className="flex flex-column  pt-8 pb-8 pl-10 pr-10">
           <div>
-            <div>{renderBoxOptions(options, handleClick)}</div>
+            <div>{renderBoxOptions(options, handlerClick)}</div>
           </div>
         </div>
         <div className="float-right pr-10">
-          <Button title="Download" function={() => handleButton()}></Button>
+          <Button
+            title="Download"
+            handlerEvent={() => handlerButton()}
+          ></Button>
         </div>
       </div>
     </>
