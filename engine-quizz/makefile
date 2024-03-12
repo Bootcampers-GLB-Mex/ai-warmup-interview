@@ -10,4 +10,11 @@ env/bin/activate:
 	. $(VENV)/bin/activate; pip install --upgrade pip;
 	touch $(VENV)/bin/activate
 
-	
+install: env
+	. $(VENV)/bin/activate; $(PIP) install -r libs/requirements.txt
+
+run: env
+	. $(VENV)/bin/activate; $(PYTHON) src.main:app
+
+run_app:
+	. $(VENV)/bin/activate; $(PYTHON) -m uvicorn src.main:app --reload
