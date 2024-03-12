@@ -1,11 +1,16 @@
 type ButtonProps = {
-    title: string
-} 
+  title: string;
+  handlerEvent: () => void;
+};
 
 const Button = (props: ButtonProps) => {
-    return <button className="bg-teal-900 hover:bg-teal-800 text-white font-bold py-2 px-4 rounded">
-            {props.title}
-        </button>
-}
+  const btnStyles =
+    "bg-teal-900 hover:bg-teal-800 text-white font-bold py-2 px-4 rounded";
+  return (
+    <button className={btnStyles} onClick={props.handlerEvent}>
+      {props.title}
+    </button>
+  );
+};
 
 export default Button;
