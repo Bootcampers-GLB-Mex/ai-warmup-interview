@@ -3,6 +3,7 @@
 import Button from "../components/Button/button";
 
 export default function StepFive() {
+  const btnStyle = "text-teal-900  bg-white border border-teal-900 focus:outline-none hover:text-white rounded"
   return (
     <>
     <div className="md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100">
@@ -21,8 +22,8 @@ export default function StepFive() {
       </div>
 
       <div className="flex flex-row text-l pt-8 pb-8 pl-10 pr-10 justify-end">
-        <Button title='Exit'></Button>
-        <Button title='Next'></Button>
+        <Button btnStyles={btnStyle} handlerEvent={() => {}} title='Exit'></Button>
+        <Button handlerEvent={() => {}} title='Next'></Button>
       </div>
     </div>
     </>
