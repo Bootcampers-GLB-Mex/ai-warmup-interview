@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import renderBoxOptions from "../utils/renderBoxOptions";
 import options from "../data/responses";
 import Button from "../components/Button/button";
@@ -20,7 +19,7 @@ export default function StepSix() {
   return (
     <>
       <div className={bodyContainerStyles}>
-        <div className="z-10 font-sans text-2xl text-teal-900 pl-10 pr-10 flex items-center justify-center text-5xl">
+        <div className="z-10 font-sans text-teal-900 pl-10 pr-10 flex items-center justify-center text-5xl">
           Check your score!
         </div>
         <div className="text-center  pt-8 text-2xl text-[#5C5C5C]">
