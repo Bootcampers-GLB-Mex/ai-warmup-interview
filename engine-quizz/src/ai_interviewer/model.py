@@ -4,19 +4,17 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 from src.ai_interviewer.constants import CONTEXT, PROMPT_TEMPALTE, CATEGORIES
+from src.ai_interviewer.llm import LLMClient
 
 
 class InterviewerModel:
-  def __init__(self):
+  def __init__(self, LLClient: LLMClient):
     set_debug(True)
-    llm = ChatOpenAI(
-      openai_api_key=OPEN_API_KEY, # needs to be loaded at the begining
-      model_name="gpt-3.5-turbo-0125",
-      temperature=0)
+    self.llm = LLClient.llm
 
     prompt = ChatPromptTemplate.from_template(PROMPT_TEMPALTE)
 
-    self.document_chain = create_stuff_documents_chain(llm, prompt)
+    self.document_chain = create_stuff_documents_chain(self.llm, prompt)
 
   def predict(self, answer: str):
     response = self.document_chain.invoke({

@@ -2,12 +2,16 @@ import uvicorn
 from typing import Union
 
 from src.ai_interviewer.router import interviewer_router
+from src.container import Container
 
 from fastapi import FastAPI, APIRouter
 
 def create_app() -> FastAPI:
+  container = Container()
+
   app = FastAPI(
     title="Engine Quizz")
+  app.container = container
   
   api_router = APIRouter(prefix='/api/v1')
 
