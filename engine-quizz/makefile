@@ -16,5 +16,5 @@ install: env
 run: env
 	. $(VENV)/bin/activate; $(PYTHON) src.main:app
 
-run_app:
+run_app: env
 	. $(VENV)/bin/activate; $(PYTHON) -m uvicorn src.main:app --reload

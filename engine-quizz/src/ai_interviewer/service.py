@@ -5,5 +5,5 @@ class InterviewerService:
     def __init__(self, model: InterviewerModel):
         self.model = model
 
-    def predict(self, query: str):
+    def get_feedback(self, query: str):
         return self.model.predict(query)

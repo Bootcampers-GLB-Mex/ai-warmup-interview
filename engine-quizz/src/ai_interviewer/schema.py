@@ -6,4 +6,4 @@ from pydantic import BaseModel
 # from strenum import StrEnum
 
 class FeedbackRequest(BaseModel):
-  question: str
+  answer: str
