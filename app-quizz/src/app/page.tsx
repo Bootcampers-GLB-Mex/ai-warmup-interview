@@ -1,5 +1,7 @@
-import Button from "./components/Button/button";
-import Input from "./components/Input/input";
+"use client";
+
+import Button from "@/app/components/Button/button";
+import Input from "@/app/components/Input/input";
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
       </div>
 
       <div className="pl-10 pr-10 pt-8 pb-8 flex items-center justify-center">
-        <Button title='New Assessment'></Button>
+        <Button handlerEvent={() => {}} title='New Assessment'></Button>
       </div>
 
     </div>

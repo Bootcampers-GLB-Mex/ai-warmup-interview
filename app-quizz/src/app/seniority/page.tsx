@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "../components/Button/button";
+import Button from "@/app/components/Button/button";
 
-export default function StepTwo() {
+export default function Seniority() {
   const btnStyle='bg-white w-40 hover:text-teal-600 text-teal-900 font-semibold py-2 px-4 border border-teal-900 rounded-full hover:text-white';
 
   return (

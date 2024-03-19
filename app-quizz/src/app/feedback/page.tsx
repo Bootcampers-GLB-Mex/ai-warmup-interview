@@ -1,10 +1,10 @@
 "use client";
 
-import renderBoxOptions from "../utils/renderBoxOptions";
-import options from "../data/responses";
-import Button from "../components/Button/button";
+import renderBoxOptions from "@/app/utils/renderBoxOptions";
+import options from "@/app/data/responses";
+import Button from "@/app/components/Button/button";
 
-export default function StepSix() {
+export default function Feedback() {
   const bodyContainerStyles =
     "md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100 pb-20";
 
@@ -41,3 +41,4 @@ export default function StepSix() {
     </>
   );
 }
+
