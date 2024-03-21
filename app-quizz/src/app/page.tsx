@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Button from "@/app/components/Button/button";
 import Input from "@/app/components/Input/input";
