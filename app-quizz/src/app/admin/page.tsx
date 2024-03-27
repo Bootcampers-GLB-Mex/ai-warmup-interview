@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import renderQuestion from "../utils/renderQuestion";
 import renderCategories from "../utils/renderCategories";
 import Button from "../components/Button/button";
