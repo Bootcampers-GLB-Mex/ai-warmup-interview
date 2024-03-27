@@ -2,6 +2,7 @@ type ButtonProps = {
   title: string;
   style?: React.CSSProperties;
   handlerEvent: () => void;
+  btnStyles?: string;
 };
 
 const Button = (props: ButtonProps) => {
@@ -14,6 +15,10 @@ const Button = (props: ButtonProps) => {
       style={{...style}}
       onClick={props.handlerEvent}
     >
+
+  return (
+    <button className={`${btnStyle} px-5 py-2.5 ml-2 mb-2 hover:bg-teal-700`} onClick={props.handlerEvent}>
+
       {props.title}
     </button>
   );
