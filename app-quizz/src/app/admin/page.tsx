@@ -6,7 +6,7 @@ import renderCategories from "../utils/renderCategories";
 import Button from "../components/Button/button";
 
 export default function StepSix() {
-  const question = "What is the scope?";
+  const question = "Question text";
 
   const bodyContainerStyles =
     "md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100 pb-20";
