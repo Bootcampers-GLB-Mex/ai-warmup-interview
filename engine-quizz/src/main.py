@@ -1,5 +1,4 @@
 import uvicorn
-from typing import Union
 
 from src.ai_interviewer.router import interviewer_router
 from src.container import Container
