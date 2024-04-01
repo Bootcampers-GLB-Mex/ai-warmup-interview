@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from "classnames";
 
 type ButtonProps = {
   title: string;
@@ -16,8 +16,9 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button
-      className={classes}
+      className={btnStyles}
       onClick={props.handlerEvent}
+      style={{...style}}
     >
       {props.title}
     </button>
