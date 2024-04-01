@@ -18,6 +18,17 @@ export default function StepSix() {
     console.log("click");
   };
 
+  const classButtonOne = {
+    marginRight: "20px",
+    padding: "10px 60px",
+    background: "#fff",
+    color: "#058076",
+    border: "1px solid #058076",
+    fontWeight: "normal",
+  };
+
+  const classButtonTwo = {padding: "10px 20px", fontWeight: "normal"};
+
   return (
     <>
       <div className={bodyContainerStyles}>
@@ -33,19 +44,12 @@ export default function StepSix() {
           <Button
             title="Save"
             handlerEvent={() => handlerButton()}
-            style={{
-              marginRight: "20px",
-              padding: "10px 60px",
-              background: "#fff",
-              color: "#058076",
-              border: "1px solid #058076",
-              fontWeight: "normal",
-            }}
+            style={classButtonOne}
           ></Button>
           <Button
             title="Save & Add new"
             handlerEvent={() => handlerButton()}
-            style={{padding: "10px 20px", fontWeight: "normal"}}
+            style={classButtonTwo}
           ></Button>
         </div>
       </div>
