@@ -1,10 +1,12 @@
 import classNames from "classnames";
+import {type} from "os";
 
 type ButtonProps = {
   title: string;
   style?: React.CSSProperties;
-  handlerEvent: () => void;
+  handlerEvent: (e: any) => void;
   btnStyles?: string;
+  type?: string;
 };
 
 const Button = (props: ButtonProps) => {
