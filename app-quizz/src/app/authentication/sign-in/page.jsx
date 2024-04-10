@@ -27,7 +27,7 @@ const SignIn = () => {
           console.log(user, 'The following is the representation of our user.');
           setLoading(false);
           sessionStorage.setItem('user', true);
-          router.push('/');
+          router.push('/admin');
         })
         .catch((error) => {
           const errorCode = error.code;
