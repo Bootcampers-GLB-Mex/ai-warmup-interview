@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 class Evaluation(BaseModel):
     question: str
+    context: str
     categories: List[str]
     answer: str
 
