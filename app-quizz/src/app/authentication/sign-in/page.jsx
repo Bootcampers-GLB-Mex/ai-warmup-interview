@@ -2,131 +2,119 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import { useRouter } from 'next/navigation';
-import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
-import { auth } from '@/app/authentication/firebase.config'
-import Button from "@/app/components/Button/button";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '@/app/authentication/firebase.config';
+import { validateForm } from '@/app/utils/validations';
+import Button from '@/app/components/Button/button';
+import UIField from '@/app/components/UIField/uiField';
 
-const Login = () => {
-    const [errors, setErrors] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
-    const router = useRouter()
+const SignIn = () => {
+  const [errors, setErrors] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
 
-    const handleSignIn = async (values) => {
-        setLoading(true);
+  const handleSignIn = async (values) => {
+    setLoading(true);
 
-        try {
-            const res = await signInWithEmailAndPassword(values.email, values.password);
-            setLoading(false);
-            console.log({res});
-            sessionStorage.setItem('user', true);
-            router.push('/')
-        }catch(e){
-            setLoading(false);
-            setErrors(e.message);
-            console.error(e);
-        }
-    };
-
-    const validateForm = (values) => {
-        const errors = {};
-
-        if (!values.email) {
-            errors.email = "Email is required";
-        } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-            errors.email = "Invalid email address";
-        }
-
-        if (!values.password) {
-            errors.password = "Password number is required";
-        } else if (values.password.length <= 8) {
-            errors.password = "Password length must be more than 7"
-        }
-
-        return errors;
+    try {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user, 'The following is the representation of our user.');
+          setLoading(false);
+          sessionStorage.setItem('user', true);
+          router.push('/');
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setLoading(false);
+          setErrors(errorMessage);
+          console.error(e);
+        });
+    } catch (e) {
+      setLoading(false);
+      setErrors(e.message);
+      console.error(e);
     }
+  };
 
-    return (
+  const buttonClassName = 'w-full p-3 bg-white rounded outline-none text-teal-900 placeholder-teal-700';
+  const errorClassName = 'text-xs mt-2 text-red-600';
+
+  return (
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="bg-teal-100 p-10 rounded-lg shadow-xl w-96">
         <h1 className="text-teal-900 text-2xl mb-5">Sign In</h1>
-        <div className='mt-4 text-xs text-red-600'>
-            {errors && errors}
-        </div>
+        <div className="mt-4 text-xs text-red-600">{errors && errors}</div>
         <Formik
-            initialValues={{ email: "", password: "" } }
-            validate={validateForm}
-            onSubmit={(values) => handleSignIn(values)}
+          initialValues={{ email: email, password: password }}
+          validate={() => validateForm({ email: email, password: password })}
+          onSubmit={(values) => handleSignIn(values)}
         >
-            {
-                ({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    isSubmitting
-                }) => (
-                    <Form className="mt-8 space-y-6" >
-                        <div className=" space-y-6 rounded-md shadow-sm">
-                            <div>
-                                <label htmlFor="email-address" className="sr-only">
-                                    Email address
-                                </label>
-                                <Field
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={values.email}
-                                    onChange={handleChange}
-                                    className="w-full p-3 bg-white rounded outline-none text-teal-900 placeholder-teal-700"
-                                    placeholder="Email address"
-                                />
+          {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
+            <Form className="mt-8 space-y-6">
+              <div className=" space-y-6 rounded-md shadow-sm">
+                <div>
+                  <UIField
+                    type="email"
+                    id="email"
+                    name="email"
+                    label="Email address"
+                    value={email}
+                    handlerOnChangeEvent={(event) => {
+                      setEmail(event.target.value);
+                      values.email = email;
+                      handleChange;
+                    }}
+                    classname={buttonClassName}
+                    placeholder="Email address"
+                  ></UIField>
 
-                                <p className='text-xs text-red-600'>
-                                    {errors.email && touched.email && errors.email}
-                                </p>
-                            </div>
+                  <p className={errorClassName}>{errors.password && touched.password && errors.password}</p>
+                </div>
 
-                            <div>
-                                <label htmlFor="password" className="sr-only">
-                                    Password
-                                </label>
-                                <Field
-                                    type="password"
-                                    id="password"
-                                    name="password"
-                                    value={values.password}
-                                    onChange={handleChange}
-                                    className="w-full p-3 bg-white rounded outline-none text-teal-900 placeholder-teal-700"
-                                    placeholder="Password"
-                                />
+                <div>
+                  <UIField
+                    type="password"
+                    id="password"
+                    name="password"
+                    label="Password"
+                    value={password}
+                    handlerOnChangeEvent={(event) => {
+                      setPassword(event.target.value);
+                      values.password = password;
+                      handleChange;
+                    }}
+                    classname={buttonClassName}
+                    placeholder="Password"
+                  ></UIField>
 
-                                <p className='text-xs text-red-600'>
-                                    { errors.password && touched.password && errors.password }
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex flex-row text-l pl-10 font-sans text-sm text-teal-900 justify-end">
-                            <div>No account yet?&nbsp;</div>
-                            <div><Link href="/authentication/sign-up" className="text-teal-900 text-secondary">Sign up</Link></div>
-                        </div>
+                  <p className={errorClassName}>{errors.password && touched.password && errors.password}</p>
+                </div>
+              </div>
+              <div className="flex flex-row text-l pl-10 font-sans text-sm text-teal-900 justify-end">
+                <div>No account yet?&nbsp;</div>
+                <div>
+                  <Link href="/authentication/sign-up" className="text-teal-900 text-secondary">
+                    Sign up
+                  </Link>
+                </div>
+              </div>
 
-                        <div className="flex flex-row text-l pb-8 pl-10 justify-end">
-                            <Button handlerEvent={() => {}} title={loading ? "Logging in ..." : " Login "}></Button>
-                        </div>
-                    </Form>
-                )
-            }
+              <div className="flex flex-row text-l pb-8 pl-10 justify-end">
+                <Button type="submit" title={loading ? 'Logging in ...' : ' Login '}></Button>
+              </div>
+            </Form>
+          )}
         </Formik>
       </div>
     </div>
-    )
-}
+  );
+};
 
-export default Login
+export default SignIn;

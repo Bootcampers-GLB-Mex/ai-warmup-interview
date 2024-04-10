@@ -1,7 +1,7 @@
 node_modules
 .next
 .DS_Store
-.env
-.env.development
-.env.local
-.env.production
+app-quizz/.env
+app-quizz/.env.development
+app-quizz/.env.local
+app-quizz/.env.production
