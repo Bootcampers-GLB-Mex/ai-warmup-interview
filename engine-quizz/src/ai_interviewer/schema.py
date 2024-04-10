@@ -14,4 +14,4 @@ class Evaluation(BaseModel):
     answer: str
 
 class FeedbackRequest(BaseModel):
-  entrevista: List[Evaluation]
+  interview: List[Evaluation]

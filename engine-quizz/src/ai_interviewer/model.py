@@ -8,6 +8,7 @@ from src.ai_interviewer.llm import LLMClient
 from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain
 import numpy as np
 import time
+import json
 
 class InterviewerModel:
     def __init__(self, LLClient: LLMClient):
@@ -17,9 +18,8 @@ class InterviewerModel:
         self.document_chain = create_stuff_documents_chain(self.llm, prompt)
     
       
-    def predict(self, entrevista):
-        import json
-        import os
+    def predict(self, interview):
+
         from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain
         from langchain_openai import ChatOpenAI 
         from langchain.prompts import PromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
@@ -28,11 +28,11 @@ class InterviewerModel:
         prompt = PROMPT_TEMPALTE
         
         chatgpt = self.llm
-        ntrvst = json.loads(entrevista.json())
+        ntrvst = json.loads(interview.json())
         
-        if 'entrevista' in ntrvst and isinstance(ntrvst['entrevista'], list):
+        if 'interview' in ntrvst and isinstance(ntrvst['interview'], list):
         
-            for interview in ntrvst['entrevista']:
+            for interview in ntrvst['interview']:
               
               context = interview['context']
               question = interview['question']
