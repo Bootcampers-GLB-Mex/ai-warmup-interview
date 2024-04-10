@@ -9,5 +9,4 @@ class LLMClient:
       self.llm = ChatOpenAI(
         openai_api_key=self.api_key,
         model_name=self.model_name,
-        streaming=True,
         temperature=0)
