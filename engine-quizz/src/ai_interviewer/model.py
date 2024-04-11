@@ -23,17 +23,10 @@ class InterviewerModel:
         from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain
         from langchain_openai import ChatOpenAI 
         from langchain.prompts import PromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
-        
-
-        prompt = PROMPT_TEMPALTE
-        
-        chatgpt = self.llm
         ntrvst = json.loads(interview.json())
-        
         if 'interview' in ntrvst and isinstance(ntrvst['interview'], list):
         
             for interview in ntrvst['interview']:
-              
               context = interview['context']
               question = interview['question']
               categories = interview['categories']
@@ -44,32 +37,18 @@ class InterviewerModel:
               print("Answer:", answer)
               print("Context:", context)
               print("---")
-              
-              data = {"categories": categories, "context": context}
-           
-              prompt_temp_sistema = PromptTemplate(
-                template= prompt,
-                input_variables=["answer"],
-                partial_variables=data
-              )
 
-              template_sistema = SystemMessagePromptTemplate(prompt=prompt_temp_sistema)
-              prompt_temp_humano = PromptTemplate(template="{question}", input_variables=["question"])
-              template_humano = HumanMessagePromptTemplate(prompt=prompt_temp_humano)
-              chat_prompt = ChatPromptTemplate.from_messages([template_sistema, template_humano])
-              chat_prompt_value = chat_prompt.format_prompt(answer=answer, question=question)
-              evaluacion = chatgpt.invoke(chat_prompt_value)
+              docs = [
+                    Document(page_content=context)
+              ]
+              
+              evaluation = self.document_chain.invoke({"categories": categories, "context": docs, "answer": answer, "question": question})
 
         else:
             print("La estructura del JSON no es la esperada.")  
       
-        for key, value in evaluacion:
-            if key == 'content':
-                content_value = value
-                break  
-
             
-            print(content_value)
-        return content_value
+        print(evaluation)
+        return evaluation
 
 
