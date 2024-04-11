@@ -1,7 +1,7 @@
 export default function renderQuestion(question, handleClick) {
   return (
     <form action="/" className="flex flex-col ">
-      <label for={question} className="pb-4">
+      <label htmlFor={question} className="pb-4">
         {question}
       </label>
       <input

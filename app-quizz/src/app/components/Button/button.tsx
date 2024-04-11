@@ -1,10 +1,9 @@
-import classNames from "classnames";
-
 type ButtonProps = {
   title: string;
   style?: React.CSSProperties;
-  handlerEvent: () => void;
+  handlerEvent?: (e: any) => void;
   btnStyles?: string;
+  type?: any;
 };
 
 const Button = (props: ButtonProps) => {
@@ -14,7 +13,7 @@ const Button = (props: ButtonProps) => {
     "bg-teal-900 hover:bg-teal-800 text-white font-bold py-2 px-4 rounded ";
 
   return (
-    <button className={btnStyles} onClick={props.handlerEvent} style={style}>
+    <button type={props.type ? props.type : 'button'} className={btnStyles} onClick={props.handlerEvent ? props.handlerEvent : () => {}} style={style}>
       {props.title}
     </button>
   );
