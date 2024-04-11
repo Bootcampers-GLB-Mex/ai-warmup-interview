@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 
 export default function renderCategories() {
-  const [inputs, setInputs] = useState([""]);
+  const [inputs, setInputs] = useState(['']);
 
   const addInput = () => {
-    setInputs(["", ...inputs]);
+    setInputs(['', ...inputs]);
   };
 
   return (
@@ -17,6 +17,7 @@ export default function renderCategories() {
               key={index}
               value={input}
               className="border rounded border-[#A7A7A7] mt-4 h-10 w-80"
+              onChange={() => setInputs(['', ...inputs])}
             />
           ))}
         </div>

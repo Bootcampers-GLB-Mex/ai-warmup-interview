@@ -5,3 +5,4 @@ app-quizz/.env
 app-quizz/.env.development
 app-quizz/.env.local
 app-quizz/.env.production
+.env
