@@ -6,19 +6,35 @@ import { auth } from '@/app/authentication/firebase.config';
 import { validateForm } from '@/app/utils/validations';
 import Button from '@/app/components/Button/button';
 import UIField from '@/app/components/UIField/uiField';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
 
 const SignUp = () => {
   const [errors, setErrors] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleSignUp = async () => {
+    setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
-        sessionStorage.setItem('user', true);
-        setEmail('');
-        setPassword('');
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user, 'The following is the representation of our user.');
+            setLoading(false);
+            sessionStorage.setItem('user', true);
+            router.push('/admin/home');
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            setLoading(false);
+            setErrors(errorMessage);
+            console.error(errorMessage);
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -38,7 +54,7 @@ const SignUp = () => {
         <Formik
           initialValues={{ email: email, password: password }}
           validate={() => validateForm({ email: email, password: password })}
-          onSubmit={(values) => handleSignIn(values)}
+          onSubmit={(values) => handleSignUp(values)}
         >
           {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
             <Form className="mt-8 space-y-6">
@@ -82,7 +98,11 @@ const SignUp = () => {
                 </div>
               </div>
               <div className="flex flex-row text-l pb-8 pl-10 justify-end">
-                <Button handlerEvent={handleSignUp} type="submit" title="Sign Up"></Button>
+                <Button
+                  handlerEvent={handleSignUp}
+                  type="submit"
+                  title={loading ? 'Loading ...' : ' Sign Up '}
+                ></Button>
               </div>
             </Form>
           )}
