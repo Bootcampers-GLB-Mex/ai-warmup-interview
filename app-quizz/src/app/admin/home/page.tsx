@@ -15,10 +15,6 @@ export default function StepSix() {
     router.push('/admin');
   };
 
-  const handlerButton = () => {
-    console.log('click');
-  };
-
   const classButtonOne = {
     marginRight: '10px',
     padding: '10px 40px',
@@ -28,8 +24,6 @@ export default function StepSix() {
     fontWeight: 'normal',
     maxWidth: '40%',
   };
-
-  const classButtonTwo = { padding: '10px 20px', fontWeight: 'normal' };
 
   return (
     <>
