@@ -8,6 +8,10 @@ from fastapi import FastAPI, APIRouter
 def create_app() -> FastAPI:
   container = Container()
 
+  logger = container.logger()
+
+  logger.info('Starting application...')
+
   app = FastAPI(
     title="Engine Quizz")
   app.container = container

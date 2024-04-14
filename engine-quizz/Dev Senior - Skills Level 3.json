@@ -1,0 +1,75 @@
+{
+  "interview_title": "Senior - Skills level 3",
+  "questions": [
+    {
+      "question": "Explain what JavaScript Object descriptors are and how they are used.",
+      "answer": "JavaScript Object descriptors are used to define the behavior of an object property. They allow you to specify whether a property is writable, enumerable, configurable, or has a specific value. Descriptors can be accessed and modified using Object.getOwnPropertyDescriptor() and Object.defineProperty() methods.",
+      "skill_name": "JavaScript Object descriptors",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "Can you explain the JavaScript Event Loop and how it works?",
+      "answer": "The JavaScript Event Loop is responsible for handling asynchronous operations in JavaScript. It consists of a call stack, callback queue, and event loop. When an asynchronous operation is encountered, it is pushed to the callback queue and processed by the event loop when the call stack is empty. This allows JavaScript to handle non-blocking operations efficiently.",
+      "skill_name": "JavaScript Event Loop",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "What are TypeScript Utility Types and how are they used?",
+      "answer": "TypeScript Utility Types are predefined generic types that provide common type transformations. They can be used to manipulate existing types and create new ones. Examples of TypeScript Utility Types include Partial, Readonly, Pick, and Omit.",
+      "skill_name": "TypeScript Utility Types",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "Explain the concept of TypeScript Namespaces and when they are used.",
+      "answer": "TypeScript Namespaces are used to organize code into logical groups and prevent naming conflicts. They provide a way to encapsulate code and create a modular structure. Namespaces are declared using the 'namespace' keyword and can be nested within each other.",
+      "skill_name": "TypeScript Namespaces",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "What is the purpose of Package Management NVM and how does it work?",
+      "answer": "Package Management NVM (Node Version Manager) is used to manage multiple versions of Node.js on a single machine. It allows developers to switch between different Node.js versions easily. NVM installs Node.js versions in separate directories and provides commands to switch between them.",
+      "skill_name": "Package Management NVM",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "How do you install and manage NPM modules using Package Management NPM?",
+      "answer": "To install NPM modules, you can use the 'npm install' command followed by the package name. NPM automatically installs the package and updates the package.json file. You can manage dependencies by specifying version ranges in the package.json file.",
+      "skill_name": "Package Management NPM Modules",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "Differentiate between NPM and YARN in terms of Package Management.",
+      "answer": "NPM and YARN are both package managers for Node.js, but YARN is known for its faster and more reliable dependency management. YARN uses a lockfile to ensure consistent installations, while NPM relies on a shrinkwrap file. YARN also parallelizes package downloads for faster installations.",
+      "skill_name": "Package Management NPM/YARN",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "How can you use NPM scripting to automate tasks in a Node.js project?",
+      "answer": "NPM scripting allows you to define custom scripts in the package.json file and run them using the 'npm run' command. Scripts can be used to automate tasks such as building, testing, and deploying a Node.js project. NPM provides predefined scripts like 'start' and 'test' for common tasks.",
+      "skill_name": "Package Management NPM Scripting",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "Explain the role of ECMAScript in defining the standards for JavaScript.",
+      "answer": "ECMAScript is the standard on which JavaScript is based. It defines the syntax, semantics, and core features of the language. JavaScript engines like V8, JavaScriptCore, SpiderMonkey, and Chakra implement the ECMAScript standard to interpret and execute JavaScript code.",
+      "skill_name": "Engine ECMAScript",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    },
+    {
+      "question": "What are some popular JavaScript engines and how do they differ?",
+      "answer": "Popular JavaScript engines include V8 (used in Chrome and Node.js), JavaScriptCore (used in Safari), SpiderMonkey (used in Firefox), and Chakra (used in Microsoft Edge). These engines differ in their optimization techniques, memory management, and performance characteristics.",
+      "skill_name": "Engine JS Engines (V8/JavaScriptCore/SpiderMonkey/Chakra)",
+      "dev_level": "Senior",
+      "skill_level": "Can perform with limited supervision"
+    }
+  ]
+}
