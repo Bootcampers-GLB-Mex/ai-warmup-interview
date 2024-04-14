@@ -1,4 +1,4 @@
-from .model import InterviewerModel
+from .interviewer_model import InterviewerModel
 
 
 class InterviewerService:

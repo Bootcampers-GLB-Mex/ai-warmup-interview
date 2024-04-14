@@ -1,13 +1,12 @@
 import json
 from langchain_core.globals import set_debug
-from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
 
-from src.ai_interviewer.constants import INTERVIEW_PROMPT_TEMPLATE
-from src.ai_interviewer.llm import LLMClient
-from src.ai_interviewer.logger import AppLogger
+from src.constants import INTERVIEW_PROMPT_TEMPLATE
+from src.llm import LLMClient
+from src.logger import AppLogger
 
 
 class InterviewModel:

@@ -3,7 +3,7 @@ import logging
 from pythonjsonlogger import jsonlogger
 # from starlette_context import context
 
-from .constants import KnownHeaders
+# from .constants import KnownHeaders
 
 EXTRA_DATA_KEY = 'extra'
 BUILD_NUMBER_KEY = 'build_number'

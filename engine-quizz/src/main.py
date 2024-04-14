@@ -1,7 +1,7 @@
 import uvicorn
 
 from src.ai_interviewer.router import interviewer_router
-from src.container import Container
+from src.ai_interviewer.container import Container
 
 from fastapi import FastAPI, APIRouter
 

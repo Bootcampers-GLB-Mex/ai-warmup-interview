@@ -1,6 +1,6 @@
 from dependency_injector.wiring import Provide, inject
-from fastapi import APIRouter, Depends, HTTPException
-from src.container import Container
+from fastapi import APIRouter, Depends
+from src.ai_interviewer.container import Container
 from .schema import FeedbackRequest
 from .service import InterviewerService
 

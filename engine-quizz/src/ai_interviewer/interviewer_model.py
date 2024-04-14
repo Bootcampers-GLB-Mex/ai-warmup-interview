@@ -1,13 +1,12 @@
 from langchain_core.globals import set_debug
-from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
 
-from src.ai_interviewer.constants import FEEDBACK_PROMPT_TEMPLATE
-from src.ai_interviewer.llm import LLMClient
+from src.constants import FEEDBACK_PROMPT_TEMPLATE
+from src.llm import LLMClient
+from src.logger import AppLogger
 from src.ai_interviewer.question_context_document import QuestionContextDocument
-from src.ai_interviewer.logger import AppLogger
 
 
 class InterviewerModel:
