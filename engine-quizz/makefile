@@ -18,3 +18,6 @@ run: env
 
 run_app: env
 	. $(VENV)/bin/activate; $(PYTHON) -m uvicorn src.main:app --reload
+
+run_interview_generator: env
+	. $(VENV)/bin/activate; $(PYTHON) -m src.ai_interview.main

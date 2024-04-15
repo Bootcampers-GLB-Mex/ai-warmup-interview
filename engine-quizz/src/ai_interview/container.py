@@ -19,5 +19,5 @@ class Container(containers.DeclarativeContainer):
 
   llm_client = providers.Singleton(LLMClient, app_settings)
 
-  interviewer_model = providers.Singleton(InterviewModel, llm_client, logger)
+  interview_model = providers.Singleton(InterviewModel, llm_client, logger)
 

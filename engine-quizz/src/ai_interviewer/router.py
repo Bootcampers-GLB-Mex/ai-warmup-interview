@@ -10,5 +10,5 @@ interviewer_router = APIRouter(prefix='/interviewer', tags=['AI Interviewer'])
 @interviewer_router.post('/feedback')
 @inject
 def feedback(request: FeedbackRequest, service: InterviewerService=Depends(Provide[Container.interviewer_service])):
-  return service.get_feedback(request)
+  return service.get_feedback(request.answer, request.question, request.context)
 

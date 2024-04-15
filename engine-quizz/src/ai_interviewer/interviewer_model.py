@@ -17,14 +17,14 @@ class InterviewerModel:
 
     self.prompt = ChatPromptTemplate.from_template(FEEDBACK_PROMPT_TEMPLATE)
 
-  def predict(self, answer: str, question: str, context: str, categories: list):
+  def predict(self, answer: str, question: str, context: str):
     chain = ({
       "answer": itemgetter("answer"),
       "context": itemgetter("context"),
-      "categories": itemgetter("categories"),
+      "question": itemgetter("question")
     }
     | self.prompt
     | self.llm
     | StrOutputParser())
-    return chain.invoke({"answer": answer, "context": [QuestionContextDocument.build_document(question, context, categories)], "categories": categories})
+    return chain.invoke({"answer": answer, "question": question, "context": [QuestionContextDocument.build_document(question, context)]})
 

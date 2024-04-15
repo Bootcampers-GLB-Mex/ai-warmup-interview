@@ -5,4 +5,3 @@ class FeedbackRequest(BaseModel):
   answer: str
   question: str
   context: str
-  categories: List[str]

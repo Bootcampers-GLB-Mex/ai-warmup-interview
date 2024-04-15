@@ -1,0 +1,1059 @@
+[
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of Microservices and how it is different from traditional monolithic architecture.",
+        "answer": "Microservices is an architectural style that structures an application as a collection of loosely coupled services. Each service is self-contained and can be deployed independently. This is different from monolithic architecture where the entire application is built as a single unit. Microservices allow for better scalability, flexibility, and resilience.",
+        "skill_name": "Patterns Microservices",
+        "dev_level": "Senior",
+        "skill_level": "Cannot perform"
+      },
+      {
+        "question": "What is ETL and how is it used in data processing?",
+        "answer": "ETL stands for Extract, Transform, Load. It is a process used to extract data from various sources, transform it into a format that is suitable for analysis, and then load it into a data warehouse or database for further processing. ETL is commonly used in data integration and business intelligence applications.",
+        "skill_name": "Patterns ETL",
+        "dev_level": "Senior",
+        "skill_level": "Cannot perform"
+      },
+      {
+        "question": "Explain the concept of Service-Oriented Architecture (SOA) and its benefits.",
+        "answer": "SOA is an architectural style that structures an application as a collection of services that are loosely coupled and can be reused across different applications. It promotes modularity, flexibility, and interoperability. SOA allows for better integration of disparate systems and promotes service reusability.",
+        "skill_name": "Patterns SOA",
+        "dev_level": "Senior",
+        "skill_level": "Cannot perform"
+      },
+      {
+        "question": "What is the publish/subscribe pattern and how is it used in messaging systems?",
+        "answer": "The publish/subscribe pattern is a messaging pattern where senders of messages (publishers) do not program the messages to be sent directly to specific receivers (subscribers). Instead, the messages are published to topics, and subscribers express interest in receiving messages on specific topics. This decouples the senders and receivers of messages, allowing for more flexible and scalable communication.",
+        "skill_name": "Patterns Publish/subscribe",
+        "dev_level": "Senior",
+        "skill_level": "Cannot perform"
+      },
+      {
+        "question": "What is a data warehouse and how is it different from a traditional database?",
+        "answer": "A data warehouse is a centralized repository for storing and analyzing data from different sources to support decision-making processes. It is designed for query and analysis rather than transaction processing. Data warehouses are optimized for read-heavy workloads and typically store historical data for analysis purposes.",
+        "skill_name": "Patterns Data warehouse",
+        "dev_level": "Senior",
+        "skill_level": "Cannot perform"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the purpose of the Web USB API and how it can be used in web development?",
+        "answer": "The Web USB API allows web applications to interact with USB devices. It can be used to communicate with hardware devices such as printers, scanners, and even IoT devices.",
+        "skill_name": "Connectivity Web USB API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How would you utilize the Web Audio API in a web application?",
+        "answer": "The Web Audio API allows for audio processing and synthesis in web applications. It can be used to create audio visualizations, games with sound effects, or even music streaming applications.",
+        "skill_name": "Connectivity Web Audio API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What is the purpose of the Web Bluetooth API and how can it be used in web development?",
+        "answer": "The Web Bluetooth API allows web applications to communicate with Bluetooth devices. It can be used to connect to Bluetooth peripherals such as heart rate monitors, smartwatches, or even IoT devices.",
+        "skill_name": "Connectivity Web Bluetooth API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How can the MediaStream Image Capture API be used to capture images in a web application?",
+        "answer": "The MediaStream Image Capture API allows for capturing images from a camera or video stream in a web application. It provides methods for taking photos, adjusting camera settings, and accessing image data.",
+        "skill_name": "Connectivity MediaStream Image Capture API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "Explain the purpose of the WebRTC API and how it can be used for real-time communication in web applications.",
+        "answer": "The WebRTC API enables real-time communication between browsers. It can be used for video conferencing, voice calling, file sharing, and other peer-to-peer communication scenarios.",
+        "skill_name": "Connectivity WebRTC API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How would you use the Media Stream API to work with audio and video streams in a web application?",
+        "answer": "The Media Stream API provides methods for accessing and manipulating audio and video streams in a web application. It can be used for recording audio and video, live streaming, or video conferencing.",
+        "skill_name": "Connectivity Media Stream API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What is the purpose of the Media Recording API and how can it be used to record media in a web application?",
+        "answer": "The Media Recording API allows for recording audio and video streams in a web application. It provides methods for capturing media from a user's microphone or camera and saving it to a file.",
+        "skill_name": "Connectivity Media Recording API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How can the Touch Events API be used to handle touch interactions on touch-enabled devices?",
+        "answer": "The Touch Events API provides methods for handling touch interactions such as tapping, swiping, pinching, and rotating on touch-enabled devices. It can be used to create touch-friendly web applications and games.",
+        "skill_name": "Connectivity Touch Events API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "Explain the importance of Real User Monitoring (RUM) in measuring the performance of a web application.",
+        "answer": "Real User Monitoring (RUM) involves collecting and analyzing data on how real users interact with a web application. It helps in understanding user experience, identifying performance issues, and optimizing the application for better user engagement.",
+        "skill_name": "Performance RUM (Real User Monitoring)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How would you use the Performance API (timing) to measure and optimize the loading performance of a web page?",
+        "answer": "The Performance API (timing) provides detailed information on the loading and rendering performance of a web page. It can be used to measure page load times, identify bottlenecks, and optimize the performance by analyzing timing metrics.",
+        "skill_name": "Performance Performance API (timing)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "What is the Performance RAIL model and how does it help in web development?",
+        "answer": "The Performance RAIL model is a framework for measuring and improving the performance of web applications. It stands for Response, Animation, Idle, and Load, and helps developers optimize the user experience by focusing on these key areas.",
+        "skill_name": "Performance RAIL model & Performance budgets",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "Can you explain the OWASP Top Ten security risks and how they can be mitigated?",
+        "answer": "The OWASP Top Ten is a list of the top ten most critical web application security risks. These risks include things like injection attacks, broken authentication, and sensitive data exposure. Mitigation strategies include input validation, secure authentication mechanisms, and encryption.",
+        "skill_name": "Security OWASP Top Ten",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What is Blockchain and how does it enable concurrency in applications?",
+        "answer": "Blockchain is a decentralized, distributed ledger technology that enables secure and transparent transactions. It allows for concurrency by ensuring that all nodes in the network have a consistent view of the data, preventing conflicts and ensuring data integrity.",
+        "skill_name": "Concurrency Blockchain",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "Can you explain the Messaging design pattern and how it helps in achieving concurrency in software systems?",
+        "answer": "The Messaging design pattern involves passing messages between different components of a system to achieve concurrency. By decoupling components and allowing them to communicate asynchronously, this pattern can help improve performance and scalability.",
+        "skill_name": "Concurrency Messaging design pattern",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How do you align Studio's Practices with Cross Compiled Applications using Native Script?",
+        "answer": "Aligning Studio's Practices with Cross Compiled Applications using Native Script involves following best practices for developing applications that can run on multiple platforms using Native Script. This includes optimizing performance, ensuring compatibility, and leveraging the features of Native Script for cross-platform development.",
+        "skill_name": "Studio\u2019s Practices Alignment Cross Compiled Applications Native Script",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What are some best practices for aligning Studio's Practices with Web Applications developed using React?",
+        "answer": "Aligning Studio's Practices with Web Applications developed using React involves following React's component-based architecture, using state and props effectively, and optimizing performance by minimizing re-renders and leveraging React's virtual DOM.",
+        "skill_name": "Studio\u2019s Practices Alignment Web Applications React",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "How can Studio's Practices be aligned with Web Applications developed using Angular?",
+        "answer": "Aligning Studio's Practices with Web Applications developed using Angular involves following Angular's modular architecture, using dependency injection, and optimizing performance by leveraging Angular's change detection mechanism and Ahead-of-Time compilation.",
+        "skill_name": "Studio\u2019s Practices Alignment Web Applications Angular",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What are some best practices for aligning Studio's Practices with Web Applications developed using Vue?",
+        "answer": "Aligning Studio's Practices with Web Applications developed using Vue involves following Vue's reactive data binding, component-based architecture, and optimizing performance by using Vue's virtual DOM and reactivity system.",
+        "skill_name": "Studio\u2019s Practices Alignment Web Applications Vue",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      },
+      {
+        "question": "What is a Headless CMS and how can it benefit web development projects?",
+        "answer": "A Headless CMS is a content management system that separates the content management and delivery layers, allowing developers to use any front-end technology to display content. This can benefit web development projects by providing flexibility, scalability, and improved performance.",
+        "skill_name": "Industry Headless CMS",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain what JavaScript Object descriptors are and how they are used.",
+        "answer": "JavaScript Object descriptors are used to define the behavior of an object property. They allow you to specify whether a property is writable, enumerable, configurable, or has a specific value. Descriptors can be accessed and modified using Object.getOwnPropertyDescriptor and Object.defineProperty methods.",
+        "skill_name": "JavaScript Object descriptors",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Can you explain the JavaScript Event Loop and how it works?",
+        "answer": "The JavaScript Event Loop is responsible for handling asynchronous operations in JavaScript. It consists of a call stack, callback queue, and event loop. When an asynchronous operation is encountered, it is pushed to the callback queue and processed by the event loop when the call stack is empty. This allows JavaScript to handle non-blocking operations effectively.",
+        "skill_name": "JavaScript Event Loop",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What are TypeScript Utility Types and how are they used?",
+        "answer": "TypeScript Utility Types are predefined generic types that provide common type transformations. They can be used to manipulate existing types and create new ones. Examples of TypeScript Utility Types include Partial, Readonly, Pick, and Omit.",
+        "skill_name": "TypeScript Utility Types",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Explain the concept of TypeScript Namespaces and when they are used.",
+        "answer": "TypeScript Namespaces are used to organize code into logical groups and prevent naming conflicts. They provide a way to create global objects that can be accessed throughout the application. Namespaces are particularly useful when working with large codebases or third-party libraries.",
+        "skill_name": "TypeScript Namespaces",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is NVM (Node Version Manager) and how does it help with package management?",
+        "answer": "NVM is a tool that allows you to manage multiple versions of Node.js on your machine. It enables you to switch between different Node.js versions easily, ensuring compatibility with different projects. NVM simplifies the process of managing Node.js versions and dependencies.",
+        "skill_name": "Package Management NVM",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How do you install and manage NPM modules in a Node.js project?",
+        "answer": "To install NPM modules, you can use the 'npm install' command followed by the package name. NPM automatically installs the package and updates the package.json file with the dependency. You can manage NPM modules by updating, removing, or adding new dependencies using NPM commands.",
+        "skill_name": "Package Management NPM Modules",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Differentiate between NPM and Yarn package managers in Node.js.",
+        "answer": "NPM and Yarn are both package managers for Node.js, but Yarn is known for its faster and more efficient dependency management. Yarn uses a lockfile to ensure consistent installations, while NPM relies on the package.json file. Yarn also has features like offline mode and parallel installation that make it a popular choice for many developers.",
+        "skill_name": "Package Management NPM/YARN",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How can you use NPM scripting to automate tasks in a Node.js project?",
+        "answer": "NPM scripting allows you to define custom scripts in the package.json file and run them using the 'npm run' command. These scripts can be used to automate tasks like building, testing, or deploying the project. NPM scripting provides a convenient way to streamline development workflows and improve project efficiency.",
+        "skill_name": "Package Management NPM Scripting",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Explain the role of ECMAScript in defining JavaScript standards.",
+        "answer": "ECMAScript is the standard on which JavaScript is based. It defines the syntax, semantics, and core features of the language. JavaScript engines like V8, JavaScriptCore, SpiderMonkey, and Chakra implement the ECMAScript standard to ensure compatibility and consistency across different platforms.",
+        "skill_name": "Engine ECMAScript",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What are some popular JavaScript engines and how do they contribute to the performance of web applications?",
+        "answer": "Popular JavaScript engines like V8 (used in Chrome), JavaScriptCore (used in Safari), SpiderMonkey (used in Firefox), and Chakra (used in Edge) are responsible for executing JavaScript code efficiently. These engines optimize code execution, memory management, and garbage collection to improve the performance of web applications.",
+        "skill_name": "Engine JS Engines (V8/JavaScriptCore/SpiderMonkey/Chakra)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of Microfrontends and how it can be implemented in a web application.",
+        "answer": "Microfrontends is an architectural style where a frontend web application is composed of multiple, smaller frontend applications that are independently developed and deployed. Each microfrontend is responsible for a specific feature or functionality of the overall application. This approach allows for better scalability, maintainability, and team autonomy. To implement Microfrontends, you can use techniques like server-side includes, iframes, or client-side composition.",
+        "skill_name": "Patterns Microfrontends",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is Flux Architecture and how does it differ from traditional MVC patterns?",
+        "answer": "Flux Architecture is a design pattern for managing data flow in a web application. It consists of four major components: actions, dispatchers, stores, and views. The key difference between Flux and traditional MVC patterns is that Flux enforces unidirectional data flow, which helps in maintaining a predictable state of the application. In Flux, views trigger actions, which are dispatched to stores to update the data, and then the updated data is reflected back in the views.",
+        "skill_name": "Patterns Flux Architecture",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Explain the concept of JAMStack and its benefits in web development.",
+        "answer": "JAMStack stands for JavaScript, APIs, and Markup. It is an architectural approach to web development that focuses on decoupling the frontend from the backend by using client-side JavaScript, reusable APIs, and pre-built Markup. JAMStack offers benefits like improved performance, security, scalability, and easier maintenance. By pre-rendering content and serving it through a CDN, JAMStack sites can deliver faster loading times and better user experiences.",
+        "skill_name": "Patterns JAMStack",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is Reactive programming and how does it differ from imperative programming?",
+        "answer": "Reactive programming is a programming paradigm that focuses on asynchronous data streams and the propagation of changes. It allows you to declaratively define the relationship between data and automatically propagate changes. In contrast, imperative programming involves explicitly defining each step to achieve a desired outcome. Reactive programming simplifies handling asynchronous events and makes it easier to manage complex data flows.",
+        "skill_name": "Patterns Reactive programming",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How does Offline First pattern improve the user experience in web applications?",
+        "answer": "Offline First is a design approach where web applications are built to work seamlessly even when the user is offline or has a poor internet connection. By caching data and assets locally, Offline First applications can provide a consistent user experience regardless of network conditions. This pattern enhances reliability, performance, and usability, making the application more resilient to network failures.",
+        "skill_name": "Patterns Offline First",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What are some examples of in-browser databases and how are they used in web development?",
+        "answer": "In-browser databases like Firebase, Redis, and CouchDB are lightweight databases that can be accessed directly from the web browser. They are commonly used for storing and syncing data between the client and server, enabling real-time updates and offline capabilities in web applications. IndexedDB is another in-browser database that provides a low-level API for storing large amounts of structured data in the browser.",
+        "skill_name": "Data Bases Inbrowser Databases (Firebase, Redis, CouchDB)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How does SQLite differ from traditional relational databases like MySQL or PostgreSQL?",
+        "answer": "SQLite is a self-contained, serverless, zero-configuration, transactional SQL database engine. Unlike MySQL or PostgreSQL, SQLite is embedded within the application and does not require a separate server process to operate. It is lightweight, fast, and easy to set up, making it ideal for mobile and small-scale applications. SQLite stores data in a single disk file, which simplifies deployment and management.",
+        "skill_name": "Data Bases SQLite",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is GraphQL and how does it improve API development compared to RESTful APIs?",
+        "answer": "GraphQL is a query language for APIs that allows clients to request only the data they need. Unlike RESTful APIs, where clients receive fixed data structures, GraphQL enables clients to specify the shape of the response they want. This reduces over-fetching and under-fetching of data, leading to more efficient API calls and improved performance. GraphQL also provides a strong type system and introspection capabilities for better API documentation.",
+        "skill_name": "Web Services GraphQL",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How do Web Sockets differ from traditional HTTP requests and when would you use them in a web application?",
+        "answer": "Web Sockets provide a full-duplex communication channel over a single, long-lived connection between the client and server. Unlike traditional HTTP requests, which are stateless and short-lived, Web Sockets allow for real-time, bidirectional communication. They are commonly used in applications that require instant updates, live data streaming, or interactive features like chat rooms, online gaming, and collaborative editing.",
+        "skill_name": "Web Services Web Sockets",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain how to implement PWA Push Notifications in a web application?",
+        "answer": "To implement PWA Push Notifications, you need to first request permission from the user, then register a service worker to handle incoming notifications, and finally send a push notification from the server to the client.",
+        "skill_name": "PWA Push Notifications",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is the purpose of a PWA Manifest file?",
+        "answer": "A PWA Manifest file is a JSON file that provides metadata about the web application such as its name, icons, theme colors, and display modes. It helps the browser understand how to display the web app when installed on a device.",
+        "skill_name": "PWA Manifest",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How can you improve performance in a web application using browser caching?",
+        "answer": "By setting appropriate cache-control headers in the server response, you can instruct the browser to cache static assets like images, CSS, and JavaScript files. This reduces the number of network requests and improves loading times.",
+        "skill_name": "Performance Browser caching",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What are some common performance metrics used to measure the performance of a web application?",
+        "answer": "First Contentful Paint (FCP) and Time to Interactive (TTI) are common performance metrics used to measure how fast a web page loads and becomes interactive. FCP measures when the first content is painted on the screen, while TTI measures when the page is fully interactive.",
+        "skill_name": "Performance Performance metrics (FCP, TTI, etc)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the difference between Open ID, SAML, and OAuth in terms of web authentication.",
+        "answer": "Open ID is an authentication protocol that allows users to be authenticated by certain websites without having to create a separate login. SAML (Security Assertion Markup Language) is an XML-based standard for exchanging authentication and authorization data between parties. OAuth is an authorization framework that allows a third-party application to obtain limited access to an HTTP service.",
+        "skill_name": "Security Web Authentication (Open ID, SAML, OAuth, JSON Web Token, Cookies)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How does 2FactorAuth enhance security compared to traditional authentication methods?",
+        "answer": "2FactorAuth adds an extra layer of security by requiring users to provide two different factors to verify their identity. This could be something they know (like a password) and something they have (like a mobile device). This makes it harder for unauthorized users to gain access.",
+        "skill_name": "Security 2FactorAuth, OTP (One Time Passwords), Biometric auth",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is the purpose of a robots.txt file in SEO?",
+        "answer": "A robots.txt file tells search engine crawlers which pages or files on a website should not be crawled or indexed. This can help prevent sensitive information from being exposed or prevent duplicate content issues.",
+        "skill_name": "SEO robots.txt and sitemap",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How do metatags and Open Graph tags contribute to SEO?",
+        "answer": "Metatags provide information about a webpage to search engines and website visitors. Open Graph tags are specific metatags used by social media platforms to control how a webpage is displayed when shared on social media. Both can impact a website's visibility and click-through rate.",
+        "skill_name": "SEO Metatags & Open Graph",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is the purpose of structured markup in SEO?",
+        "answer": "Structured markup, such as microdata, json-ld, and RDFa, helps search engines understand the content on a webpage better. This can lead to rich snippets in search results, which can improve click-through rates and visibility.",
+        "skill_name": "SEO Structured Markup (microdata, json-ld, RDFa)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How can SEO audit tools help improve a website's performance?",
+        "answer": "SEO audit tools can analyze a website's SEO performance, identify issues that may be affecting its visibility in search engines, and provide recommendations for improvement. This can help website owners optimize their site for better search engine rankings.",
+        "skill_name": "SEO SEO audit tools",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is A/B testing in the context of analytics?",
+        "answer": "A/B testing is a method of comparing two versions of a webpage or app to see which one performs better. By randomly showing different versions to users and measuring the results, businesses can make data-driven decisions to improve user experience and conversion rates.",
+        "skill_name": "Analytics A/B Testing",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How does Google Tag Manager simplify the process of managing analytics tags on a website?",
+        "answer": "Google Tag Manager allows marketers to add, update, and manage tags on a website without needing to modify the website's code. This can streamline the process of implementing analytics and tracking codes, as well as provide more flexibility and control over tag management.",
+        "skill_name": "Analytics Google Tag Manager",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is the significance of Adobe Analytics in the field of analytics?",
+        "answer": "Adobe Analytics is a powerful analytics platform that provides detailed insights into website and app performance, user behavior, and marketing effectiveness. It helps businesses make data-driven decisions to optimize their digital strategies and improve customer experiences.",
+        "skill_name": "Analytics Adobe Analytics",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How do the principles of SOLID and DRY apply to Adobe Analytics implementation?",
+        "answer": "SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) and DRY (Don't Repeat Yourself) are software design principles that can be applied to Adobe Analytics implementation to ensure code quality, maintainability, and scalability. Following these principles can lead to more efficient and effective analytics tracking.",
+        "skill_name": "SOLID/DRY Adobe Analytics",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the difference between Creational Abstract Factory and Creational Factory Method design patterns?",
+        "answer": "The Creational Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes, while the Creational Factory Method pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate.",
+        "skill_name": "Can perform with limited supervision",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How would you implement the Creational Singleton pattern in a JavaScript application?",
+        "answer": "The Creational Singleton pattern ensures a class has only one instance and provides a global point of access to it. In JavaScript, this can be achieved by using a self-invoking function and closure to maintain a single instance.",
+        "skill_name": "Can perform with limited supervision",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Can you give an example of how the Structural Adapter pattern is used in a real-world scenario?",
+        "answer": "The Structural Adapter pattern allows incompatible interfaces to work together. An example could be adapting a new version of a library to work with an older version by creating an adapter that translates the new interface to the old one.",
+        "skill_name": "Can perform with limited supervision",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the concept of Structural Flyweight pattern?",
+        "answer": "The Structural Flyweight pattern is a design pattern used to minimize memory usage and improve performance by sharing objects that are frequently used. It involves dividing an object into intrinsic and extrinsic states, where the intrinsic state is shared among multiple objects.",
+        "skill_name": "Structural Flyweight",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How would you implement the Behavior Observer pattern in a software application?",
+        "answer": "The Behavior Observer pattern is used to establish a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This can be implemented by defining an interface for the observer and subject, allowing multiple observers to subscribe to a subject and receive notifications.",
+        "skill_name": "Behavior Observer",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "Can you provide an example of how the Behavior Strategy pattern can be used in a real-world scenario?",
+        "answer": "The Behavior Strategy pattern is used to define a family of algorithms, encapsulate each one, and make them interchangeable. An example could be implementing different sorting algorithms (e.g., bubble sort, quick sort) as strategies that can be selected at runtime based on the specific requirements.",
+        "skill_name": "Behavior Strategy",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How would you apply the Behavior State pattern to manage the state of an object in a complex system?",
+        "answer": "The Behavior State pattern allows an object to alter its behavior when its internal state changes. This can be implemented by defining separate state classes that encapsulate the behavior associated with each state and allowing the object to switch between states based on its current state.",
+        "skill_name": "Behavior State",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the concept of Behavior Template Method?",
+        "answer": "Behavior Template Method is a design pattern that defines the program skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing its structure.",
+        "skill_name": "Behavior Template Method",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "How would you align Studio's Practices for Hybrid Applications using Ionic?",
+        "answer": "Aligning Studio's Practices for Hybrid Applications using Ionic involves following best practices and guidelines provided by the Ionic framework to ensure efficient development and deployment of hybrid applications.",
+        "skill_name": "Studio\u2019s Practices Alignment Hybrid Applications Ionic",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      },
+      {
+        "question": "What is the role of CI/CD in software development and how does Jenkins contribute to it?",
+        "answer": "CI/CD (Continuous Integration/Continuous Deployment) is a practice in software development where code changes are automatically built, tested, and deployed. Jenkins is a popular CI/CD tool that helps automate the build and deployment process, ensuring that code changes are integrated and deployed smoothly.",
+        "skill_name": "CI/CD Jenkins",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "What is CI/CD and how does Travis CI fit into the CI/CD pipeline?",
+        "answer": "CI/CD stands for Continuous Integration/Continuous Deployment, which is a practice in software development where code changes are automatically built, tested, and deployed frequently. Travis CI is a popular CI/CD tool that integrates with GitHub repositories to automate the testing and deployment process.",
+        "skill_name": "Can perform with limited supervision",
+        "dev_level": "Senior",
+        "skill_level": "Can perform with limited supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of OOP Prototype in JavaScript.",
+        "answer": "In JavaScript, every object has a prototype property which allows objects to inherit properties and methods from other objects. When a property or method is accessed on an object, JavaScript will first look for it on the object itself, and if not found, it will look at the object's prototype, and so on up the prototype chain.",
+        "skill_name": "OOP Prototype",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is the difference between prototypal inheritance and classical inheritance in JavaScript?",
+        "answer": "Prototypal inheritance in JavaScript involves objects inheriting directly from other objects, while classical inheritance involves classes and objects inheriting from classes. Prototypal inheritance is more flexible and dynamic compared to classical inheritance.",
+        "skill_name": "OOP Prototypal inheritance",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does currying work in functional programming?",
+        "answer": "Currying is the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This allows for partial application of the function, where some arguments are provided now and the rest later.",
+        "skill_name": "Functional Currying",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is recursion in programming and how is it used?",
+        "answer": "Recursion is a technique in which a function calls itself in order to solve smaller instances of the same problem. It is commonly used in algorithms like factorial calculation, Fibonacci sequence generation, and tree traversal.",
+        "skill_name": "Functional Recursivity",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the concept of 'this' keyword in JavaScript.",
+        "answer": "'this' in JavaScript refers to the object that is currently executing the function. The value of 'this' is determined by how a function is called, and it can change dynamically depending on the context in which the function is executed.",
+        "skill_name": "JavaScript This",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are the differences between call, bind, and apply methods in JavaScript?",
+        "answer": "Call, bind, and apply are methods used to set the value of 'this' in a function and to pass arguments to the function. Call and apply immediately invoke the function, while bind returns a new function with the specified 'this' value and arguments.",
+        "skill_name": "JavaScript Call/Bind/Apply",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does type coercion work in JavaScript?",
+        "answer": "Type coercion in JavaScript is the automatic conversion of values from one data type to another. This can happen in situations like comparing different data types with operators, or when using loose equality operators like '==' which perform type coercion before comparison.",
+        "skill_name": "JavaScript Coercion",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the difference between JavaScript ES Modules and Require JS.",
+        "answer": "JavaScript ES Modules are the official standard for modular code in JavaScript, allowing you to export and import modules using 'export' and 'import' keywords. Require JS is a library that provides a way to load modules asynchronously in the browser using 'define' and 'require' functions.",
+        "skill_name": "JavaScript ES Modules",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Can you explain the concept of TypeScript Generics and provide an example?",
+        "answer": "TypeScript Generics allow you to create reusable components that can work with a variety of data types. For example, a generic function to reverse an array can be defined as 'function reverse<T>(arr: T[]): T[] { return arr.reverse(); }'.",
+        "skill_name": "TypeScript Generics",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How do TypeScript Union Types differ from Intersection Types?",
+        "answer": "TypeScript Union Types allow a value to be of multiple types, denoted by the '|' symbol. Intersection Types combine multiple types into one, denoted by the '&' symbol.",
+        "skill_name": "TypeScript Union Types",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are TypeScript Decorators and how can they be used?",
+        "answer": "TypeScript Decorators are a design pattern that allows you to add metadata to classes, methods, or properties. They are prefixed with the '@' symbol and can be used for logging, profiling, or dependency injection.",
+        "skill_name": "TypeScript Decorators",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the role of OS Android Web Browsers in mobile development.",
+        "answer": "OS Android Web Browsers are the default web browsers on Android devices, such as Chrome or Firefox. Developers need to ensure their web applications are compatible and optimized for these browsers to provide a seamless user experience on Android devices.",
+        "skill_name": "OS Android Web Browsers",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the difference between OS IOS Web Browsers and OS Web Wrapper (Browser in App).",
+        "answer": "OS IOS Web Browsers are standalone web browsers that run on the iOS operating system, while OS Web Wrapper (Browser in App) is a method of embedding a web browser within a mobile app.",
+        "skill_name": "OS IOS Web Browsers",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does Electron differ from Node in terms of application development?",
+        "answer": "Electron is a framework for building cross-platform desktop applications using web technologies, while Node is a runtime environment for executing JavaScript code outside of a web browser.",
+        "skill_name": "OS Electron",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are the key components of the MVC/MV* design pattern?",
+        "answer": "The MVC/MV* design pattern consists of Model (data), View (presentation), and Controller (logic) components that separate the concerns of an application.",
+        "skill_name": "Patterns MVC/MV*",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the role of Web Components in architecture development.",
+        "answer": "Web Components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.",
+        "skill_name": "Architecture Components Web Components",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is the purpose of the Shadow DOM in web development?",
+        "answer": "The Shadow DOM is a way to create self-contained DOM trees in web components, which are hidden from the main document DOM.",
+        "skill_name": "Architecture Components Shadow DOM",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does the CSS Object Model (CSSOM) interact with the DOM in web development?",
+        "answer": "The CSS Object Model (CSSOM) is a set of APIs that allow you to interact with and manipulate CSS stylesheets in the Document Object Model (DOM) of a web page.",
+        "skill_name": "Architecture Components CSSOM",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the purpose of Doctypes in HTML?",
+        "answer": "Doctypes in HTML are used to inform the web browser about the version of HTML being used in the document. It helps the browser to render the content correctly.",
+        "skill_name": "UI Markup HTML HTML: Doctypes",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How do you define document metadata in HTML?",
+        "answer": "Document metadata in HTML is defined using the <meta> tag. It includes information like character encoding, author, description, keywords, etc.",
+        "skill_name": "UI Markup HTML HTML: Document metadata",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is the purpose of Semantic Markup in HTML?",
+        "answer": "Semantic Markup in HTML is used to provide meaning to the content rather than just presentation. It helps search engines and screen readers to understand the content better.",
+        "skill_name": "UI Markup HTML HTML: Semantic Markup",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Can you give an example of an embedded content element in HTML?",
+        "answer": "One example of an embedded content element in HTML is the <iframe> tag, which is used to embed another HTML document within the current document.",
+        "skill_name": "UI Markup HTML HTML: Embedded content elements (picture, iframes, etc)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How do you create a form in HTML?",
+        "answer": "Forms in HTML are created using the <form> tag, which contains input elements like text fields, checkboxes, radio buttons, etc., to collect user input.",
+        "skill_name": "UI Markup HTML HTML: Forms",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the purpose of the <canvas> tag in HTML.",
+        "answer": "The <canvas> tag in HTML is used to draw graphics, animations, and other visual images on the fly using JavaScript.",
+        "skill_name": "UI Markup HTML HTML: canvas, audio, video",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is SVG in HTML used for?",
+        "answer": "SVG (Scalable Vector Graphics) in HTML is used to create vector graphics that can be scaled without losing quality. It is ideal for creating icons, logos, and illustrations.",
+        "skill_name": "UI Markup HTML SVG",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How do you use flexbox for layouting in CSS?",
+        "answer": "Flexbox in CSS is used to create flexible layouts where items can grow or shrink to fill the available space. It provides a more efficient way to align and distribute space among items in a container.",
+        "skill_name": "UI Styling CSS CSS: Layouting (float, inline-block, position, grid, flexbox)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the concept of Box-Model in CSS.",
+        "answer": "The Box-Model in CSS refers to the way elements are rendered on a web page, where each element is treated as a rectangular box with content, padding, border, and margin. Understanding the Box-Model is crucial for designing layouts.",
+        "skill_name": "UI Styling CSS CSS: Box-Model",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are the different units available in CSS for specifying lengths?",
+        "answer": "In CSS, lengths can be specified using units like pixels (px), percentages (%), em, rem, vh, vw, etc. Each unit has its own characteristics and is used for different purposes.",
+        "skill_name": "UI Styling CSS CSS: Units",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the difference between localStorage, sessionStorage, and cookies in terms of object persistency.",
+        "answer": "localStorage, sessionStorage, and cookies are all ways to store data on the client-side. localStorage and sessionStorage are both part of the Web Storage API and provide a way to store key/value pairs locally in the browser. The main difference between them is that localStorage data persists even after the browser is closed, while sessionStorage data is only available for the duration of the page session. Cookies, on the other hand, are small pieces of data stored in the browser that are sent with each request to a server. They have an expiration date and can be used for tracking user information.",
+        "skill_name": "Object Persistency LocalStorage",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How can you use media queries in CSS to create responsive designs?",
+        "answer": "Media queries in CSS allow you to apply different styles based on the characteristics of the device or browser window. By using media queries, you can set specific CSS rules to be applied when certain conditions are met, such as screen width, height, orientation, or resolution. This enables you to create responsive designs that adapt to different screen sizes and devices.",
+        "skill_name": "UI Styling CSS CSS: Media-queries",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are some common CSS architectures and how do they help in organizing stylesheets?",
+        "answer": "Common CSS architectures like BEM (Block Element Modifier), SMACSS (Scalable and Modular Architecture for CSS), and OOCSS (Object-Oriented CSS) provide guidelines and best practices for structuring and organizing CSS code. They help in creating maintainable and scalable stylesheets by promoting a modular approach, separating concerns, and reducing specificity conflicts. By following these architectures, developers can write more structured and reusable CSS code.",
+        "skill_name": "UI Styling CSS CSS: CSS Architecture (BEM, SMACSS, OOCSS)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the difference between Web Services HTTP Protocol and Web Services REST API.",
+        "answer": "Web Services HTTP Protocol is a set of rules that allows systems to communicate over the internet. REST API is a type of web service that follows the principles of REST (Representational State Transfer) architecture.",
+        "skill_name": "Web Services HTTP Protocol",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does Web Services CORS work and why is it important in web development?",
+        "answer": "CORS (Cross-Origin Resource Sharing) is a mechanism that allows resources on a web page to be requested from another domain outside the domain from which the resource originated. It is important in web development to prevent cross-origin security issues.",
+        "skill_name": "Web Services CORS",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are some common performance audit tools used in web development?",
+        "answer": "Some common performance audit tools used in web development are Chrome Dev Tools, Lighthouse, and Web Page Test.",
+        "skill_name": "Performance Performance audit tools: Chrome Dev Tools, Lighthouse, Web Page Test",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the importance of Web Content Accessibility Guidelines (WCAG) 2.1 in web development.",
+        "answer": "WCAG 2.1 provides guidelines for making web content more accessible to people with disabilities. It is important in web development to ensure that websites are usable by all individuals, regardless of their abilities.",
+        "skill_name": "Accessibility Web Content Accessibility Guidelines (WCAG) 2.1",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is the purpose of the Internationalization API in web development?",
+        "answer": "The Internationalization API provides functionalities for adapting web applications to different languages and regions. It is used to make web applications more accessible and user-friendly for a global audience.",
+        "skill_name": "Localization Internationalization API",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Can you explain the process of Localization Interpolation and how it is used in software development?",
+        "answer": "Localization Interpolation is the process of dynamically inserting variables or placeholders into localized strings to generate language-specific output. It is commonly used for dynamic content such as user-generated messages or error messages.",
+        "skill_name": "Localization Interpolation, Pluralization, Date/Money formatting",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are some common message formats used for Localization in software development?",
+        "answer": "Common message formats for Localization include ICU (International Components for Unicode), PO (Portable Object), and others. These formats help developers manage and translate language-specific content in their applications.",
+        "skill_name": "Localization Message formats (ICU, PO, etc)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Can you explain the concept of Test-Driven Development (TDD) and how it is implemented using Karma, Jasmine, and Sinon?",
+        "answer": "Test-Driven Development is a software development approach where tests are written before the actual code implementation. Karma is a test runner, Jasmine is a testing framework, and Sinon is a mocking library commonly used in TDD to write and run tests.",
+        "skill_name": "(T/B/D)DD Karma/Jasmine/Sinon",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How would you use Protractor or Cypress for End-to-End testing in a Test-Driven Development (TDD) environment?",
+        "answer": "Protractor and Cypress are both popular tools for End-to-End testing in web applications. They can be integrated into a TDD workflow to automate browser interactions and test user scenarios.",
+        "skill_name": "(T/B/D)DD Protractor / Cypress",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is Jest and how does it differ from other testing frameworks in JavaScript?",
+        "answer": "Jest is a testing framework commonly used for JavaScript projects. It is known for its simplicity, speed, and built-in features like mocking and snapshot testing. Jest is often preferred for its ease of use and comprehensive documentation.",
+        "skill_name": "(T/B/D)DD Jest",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Can you explain the different JavaScript Data Structures and their use cases in software development?",
+        "answer": "JavaScript Data Structures include Datatypes, Primitives, Lists, Trees, and Graphs. Each structure has specific characteristics and applications in organizing and manipulating data efficiently.",
+        "skill_name": "Javascript Data Structures JavaScript Datatypes",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of Javascript Data Structures Reactive Structures.",
+        "answer": "Javascript Data Structures Reactive Structures refer to the use of reactive programming principles in managing and manipulating data structures in Javascript. This involves creating data structures that automatically update themselves in response to changes, allowing for more efficient and dynamic data management.",
+        "skill_name": "Javascript Data Structures Reactive Structures",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How do Studio\u2019s Practices Alignment VR Applications differ from traditional application development?",
+        "answer": "Studio\u2019s Practices Alignment VR Applications involve aligning development practices specifically for Virtual Reality applications, which require unique considerations such as immersive user experiences and optimized performance for VR environments. This differs from traditional application development by focusing on the specific requirements and challenges of VR technology.",
+        "skill_name": "Studio\u2019s Practices Alignment VR Applications",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are the key considerations in Studio\u2019s Practices Alignment for OTT platforms?",
+        "answer": "Studio\u2019s Practices Alignment for OTT platforms involves aligning development practices for Over-The-Top media platforms, which require considerations such as streaming optimization, cross-platform compatibility, and user engagement features specific to OTT services. Key considerations include content delivery, user experience, and platform integration.",
+        "skill_name": "Studio\u2019s Practices Alignment OTT",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the role of Code Organization in Version Control Systems (VCS) using GIT.",
+        "answer": "Code Organization in Version Control Systems (VCS) using GIT involves structuring and managing code repositories in a way that facilitates collaboration, versioning, and code maintenance. This includes organizing code into branches, managing commits, resolving conflicts, and ensuring code consistency across team members.",
+        "skill_name": "Code Organization (VCS) GIT",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are the advantages of using a Mono Repo for Code Organization in Version Control Systems (VCS)?",
+        "answer": "A Mono Repo for Code Organization in Version Control Systems (VCS) offers advantages such as centralized code management, consistent dependencies, easier code sharing, and simplified build and deployment processes. It allows for better code visibility, collaboration, and maintenance across projects within a single repository.",
+        "skill_name": "Code Organization (VCS) Mono Repo",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does Code Organization in a Multi Repo setup differ from a Mono Repo approach in Version Control Systems (VCS)?",
+        "answer": "Code Organization in a Multi Repo setup involves managing code across multiple repositories, each dedicated to a specific project or component. This differs from a Mono Repo approach where all projects are stored in a single repository. Multi Repo setups offer more isolation and flexibility but may require additional coordination and management.",
+        "skill_name": "Code Organization (VCS) Multi repo",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "Explain the process of Building/Packaging using Webpack.",
+        "answer": "Building/Packaging using Webpack involves bundling and optimizing web assets such as JavaScript, CSS, and images for efficient delivery to browsers. Webpack uses a modular approach to manage dependencies, code splitting, and asset transformations, allowing for a streamlined build process and improved performance.",
+        "skill_name": "Building/Packaging Webpack",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What is the role of NPM/YARN in Building/Packaging applications?",
+        "answer": "NPM/YARN play a crucial role in Building/Packaging applications by managing dependencies, scripts, and package versions for a project. They provide tools for installing, updating, and publishing packages, as well as running build scripts and managing project configurations. NPM and YARN help streamline the development workflow and ensure consistent package management.",
+        "skill_name": "Building/Packaging NPM/YARN",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "How does Transpilers like Babel contribute to Building/Packaging modern web applications?",
+        "answer": "Transpilers like Babel contribute to Building/Packaging modern web applications by converting newer ECMAScript versions into compatible code that can run on older browsers. This allows developers to use the latest language features while ensuring cross-browser compatibility and performance optimization during the build process.",
+        "skill_name": "Building/Packaging Transpilers (babel)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      },
+      {
+        "question": "What are some challenges in using older tools like Bower and Grunt for Building/Packaging web applications?",
+        "answer": "Using older tools like Bower and Grunt for Building/Packaging web applications may pose challenges such as outdated dependencies, limited community support, and less efficient build processes compared to modern tools. These tools may lack features like tree-shaking, hot module replacement, and advanced optimization techniques that are essential for modern web development.",
+        "skill_name": "Building/Packaging Old Tools (Bower, Grunt)",
+        "dev_level": "Senior",
+        "skill_level": "Can perform without supervision"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of JavaScript Closures and provide an example.",
+        "answer": "JavaScript closures are functions that have access to variables from their containing scope even after the scope has closed. An example of a closure is a function that returns another function which has access to the variables of the outer function.",
+        "skill_name": "JavaScript Closures",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "What is JavaScript Hoisting and how does it work?",
+        "answer": "JavaScript hoisting is a mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase. This allows you to use variables and functions before they are declared in the code.",
+        "skill_name": "JavaScript Hoisting",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Explain the concept of JavaScript Destructuring and provide an example.",
+        "answer": "JavaScript destructuring is a way to extract values from objects or arrays and assign them to variables in a more concise and readable manner. An example of destructuring is const { name, age } = person; where 'person' is an object with 'name' and 'age' properties.",
+        "skill_name": "JavaScript Destructuring",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "What are JavaScript Rest and Spread operators and how do they differ?",
+        "answer": "The Rest operator (...) is used to gather elements into an array, while the Spread operator (...) is used to spread elements out of an array. Rest is used in function parameters to collect arguments into an array, while Spread is used to spread elements of an array into individual elements.",
+        "skill_name": "JavaScript Rest/Spreading",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Explain the concept of JavaScript Template Strings and provide an example.",
+        "answer": "JavaScript Template Strings are string literals that allow embedded expressions and multi-line strings. An example of a template string is `Hello, ${name}!` where 'name' is a variable that will be interpolated into the string.",
+        "skill_name": "JavaScript Template Strings",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "What is the difference between shallow copy and deep copy in JavaScript Object copy?",
+        "answer": "A shallow copy creates a new object but does not create copies of nested objects, while a deep copy creates a new object and recursively copies all nested objects within it. Shallow copy only copies the references to nested objects, while deep copy creates new instances of nested objects.",
+        "skill_name": "JavaScript Object copy",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      }
+    ]
+  },
+  {
+    "interview_title": "Talent Model Senior",
+    "questions": [
+      {
+        "question": "Explain the concept of JavaScript Event Delegation and how it is used in web development.",
+        "answer": "JavaScript Event Delegation is a technique where you attach a single event listener to a parent element rather than multiple event listeners to individual child elements. This is useful for handling events on dynamically added elements or improving performance by reducing the number of event listeners. The event is then handled based on the target element that triggered it through event bubbling.",
+        "skill_name": "JavaScript Event Delegation / Event Handling / Bubbling",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Differentiate between the DOM and the Document object in JavaScript.",
+        "answer": "The DOM (Document Object Model) is a programming interface for web documents that represents the structure of a document as a tree of objects. The Document object is the top-level object in the DOM hierarchy and represents the entire HTML document. It provides properties and methods to interact with the document's content.",
+        "skill_name": "JavaScript Dom vs Document",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "How would you manipulate the DOM using JavaScript?",
+        "answer": "DOM manipulation involves accessing and modifying the elements and attributes of an HTML document using JavaScript. This can be done by selecting elements using methods like getElementById or querySelector, and then changing their properties, attributes, or content dynamically.",
+        "skill_name": "JavaScript Dom Manipulation",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "What are JavaScript exceptions and how do you handle them?",
+        "answer": "JavaScript exceptions are errors that occur during the execution of a program. They can be handled using try-catch blocks where the code that might throw an exception is placed inside the try block, and any potential errors are caught and handled in the catch block.",
+        "skill_name": "JavaScript Exceptions",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Explain the differences between popular web browsers like Chrome, Safari, Firefox, and Edge in terms of operating systems they support and their market share.",
+        "answer": "Each web browser has its own rendering engine and features, but they all support major operating systems like Windows, macOS, and Linux. Chrome is the most widely used browser, followed by Safari on macOS and iOS devices, Firefox on various platforms, and Edge on Windows. Understanding browser compatibility is crucial for web development.",
+        "skill_name": "OS Web Browsers (Chrome, Safari, Firefox, Edge)",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Describe the purpose and usage of section elements in HTML.",
+        "answer": "Section elements in HTML like <section>, <article>, and <aside> are used to semantically structure a web page by dividing it into meaningful sections. They help improve accessibility, SEO, and maintainability of the content by providing a clear hierarchy and organization.",
+        "skill_name": "UI Markup HTML HTML: Section elements (body, section, article, div, etc)",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "How would you group and format text elements in HTML using tags like <p>, <a>, and <dl>?",
+        "answer": "Text elements like paragraphs (<p>), links (<a>), and definition lists (<dl>) are used to structure and format text content in HTML. Paragraphs are used for regular text, links for hyperlinks, and definition lists for term/definition pairs.",
+        "skill_name": "UI Markup HTML HTML: Grouping and Text elements (p, a, dl, etc)",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Explain how tables are used in HTML for displaying tabular data.",
+        "answer": "HTML tables (<table>, <tr>, <td>) are used to display tabular data in rows and columns. They provide a structured way to present information, with rows representing individual records and columns containing data fields. Tables can be styled using CSS for better visual presentation.",
+        "skill_name": "UI Markup HTML HTML: Tables",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "Discuss the importance of CSS selectors in styling web pages and explain the concept of specificity and pseudo-selectors.",
+        "answer": "CSS selectors are used to target specific elements on a web page for styling. Specificity determines which styles take precedence when multiple rules apply to the same element. Pseudo-selectors are used to style elements based on their state or position, like :hover or :nth-child(). Understanding selectors is crucial for effective CSS styling.",
+        "skill_name": "UI Styling CSS CSS: Selectors (specificity/pseudo)",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      },
+      {
+        "question": "What are JavaScript Promises and how do they help in handling asynchronous operations?",
+        "answer": "JavaScript Promises are objects that represent the eventual completion or failure of an asynchronous operation and its resulting value. They provide a cleaner way to handle asynchronous code compared to callbacks, allowing for better error handling and chaining of multiple asynchronous operations.",
+        "skill_name": "Javascript Promises",
+        "dev_level": "Senior",
+        "skill_level": "Can teach others"
+      }
+    ]
+  }
+]

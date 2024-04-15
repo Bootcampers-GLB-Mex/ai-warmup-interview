@@ -16,16 +16,17 @@ CONTEXT:
 {context}
 ###
 
-Return the EVALUATION following the next FORMAT:
+Return the EVALUATION as a json with the following structure:
 ###
-{
+{{{{
   category: <CATEGORY>,
   score: <SCORE>,
   feedback: <FEEDBACK>,
   correct_answer: <CORRECT_ANSWER>
-}
+}}}}
 ###
 
+QUESTION: {question}
 ANSWER: {answer}
 
 EVALUATION:

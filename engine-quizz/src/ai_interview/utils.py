@@ -1,7 +1,7 @@
 import json
 
 def write_json(file_name: str, skills_prompts: list):
-  with open(f'{file_name}.json', 'w') as f:
+  with open(f'{file_name}', 'w') as f:
     json.dump(skills_prompts, f)
 
 def split_to_pages(df, page_size):
