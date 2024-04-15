@@ -1,23 +1,23 @@
 
 "use client";
 
-import Button from "@/app/components/Button/button";
+import Button from "@/components/Button/button";
 
 export default function Question({ params }) {
   // let questionNumber = params?.question?.split('-');
   // questionNumber = questionNumber[1] ? questionNumber[1] : 0;
 
-  const btnStyle = "text-teal-900  bg-white border border-teal-900 focus:outline-none hover:text-white rounded"
+  const btnStyle = "text-white-900  bg-white border border-teal-900 focus:outline-none hover:text-white rounded"
   return (
     <>
     <div className="md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100">
       <div className="font-sans text-sm text-gray-400 pt-1 pb-1 pl-10 pr-10 flex items-center justify-end">
         {params?.id}/10
       </div>
-      <div className="z-10 font-sans pt-1 pb-1 text-xl text-teal-900 pl-10 pr-10 flex items-center justify-center">
+      <div className="z-10 font-sans pt-1 pb-1 text-xl text-white-900 pl-10 pr-10 flex items-center justify-center">
         Aut debitis voluptatem non aliquam fuga qui error.      
       </div>
-      <div className="z-10 font-sans pt-1 pb-1 text-l text-teal-900 pl-10 pr-10 flex items-center justify-center">
+      <div className="z-10 font-sans pt-1 pb-1 text-l text-white-900 pl-10 pr-10 flex items-center justify-center">
         Aut debitis voluptatem non aliquam fuga qui error voluptatum qui neque veniam. Et magnam aspernatur et iusto voluptatem non nostrum nulla quo dolore ducimus et vero placeat?
       </div>
 
@@ -26,8 +26,8 @@ export default function Question({ params }) {
       </div>
 
       <div className="flex flex-row text-l pt-8 pb-8 pl-10 pr-10 justify-end">
-        <Button btnStyles={btnStyle} handlerEvent={() => {}} title='Exit'></Button>
-        <Button handlerEvent={() => {}} title='Next'></Button>
+        <Button btnStyles={btnStyle} onClick={() => {}} title='Exit'></Button>
+        <Button onClick={() => {}} title='Next'></Button>
       </div>
     </div>
     </>

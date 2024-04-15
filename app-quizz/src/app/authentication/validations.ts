@@ -1,5 +1,5 @@
-export const validateForm = (values) => {
-  const errors = {};
+export const validateAuthForm = (values: FormValues) => {
+  const errors: any = {};
 
   if (!values.email) {
     errors.email = 'Email is required';
@@ -8,7 +8,7 @@ export const validateForm = (values) => {
   }
 
   if (!values.password) {
-    errors.password = 'Password number is required';
+    errors.password = 'Password is required';
   } else if (values.password.length <= 8) {
     errors.password = 'Password length must be more than 7';
   }

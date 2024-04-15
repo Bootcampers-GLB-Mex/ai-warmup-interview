@@ -1,8 +1,8 @@
 'use client';
 
-import renderQuestion from '../utils/renderQuestion';
-import renderCategories from '../utils/renderCategories';
-import Button from '../components/Button/button';
+import renderQuestion from '../../utils/renderQuestion';
+import renderCategories from '../../utils/renderCategories';
+import Button from '../../components/Button/button';
 
 export default function StepSix() {
   const question = 'Question text';
@@ -39,8 +39,8 @@ export default function StepSix() {
             </div>
           </div>
           <div className="float-right pr-10 absolute bottom-0 right-0 mb-4 mr-10">
-            <Button title="Save" handlerEvent={() => handlerButton()} style={classButtonOne}></Button>
-            <Button title="Save & Add new" handlerEvent={() => handlerButton()} style={classButtonTwo}></Button>
+            <Button title="Save" onClick={() => handlerButton()} style={classButtonOne}></Button>
+            <Button title="Save & Add new" onClick={() => handlerButton()} style={classButtonTwo}></Button>
           </div>
         </div>
       </div>

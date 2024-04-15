@@ -1,8 +1,8 @@
 "use client";
 
-import renderBoxOptions from "@/app/utils/renderBoxOptions";
-import options from "@/app/data/responses";
-import Button from "@/app/components/Button/button";
+import renderBoxOptions from "@/utils/renderBoxOptions";
+import options from "@/data/responses";
+import Button from "@/components/Button/button";
 
 export default function Feedback() {
   const bodyContainerStyles =
@@ -19,7 +19,7 @@ export default function Feedback() {
   return (
     <>
       <div className={bodyContainerStyles}>
-        <div className="z-10 font-sans text-teal-900 pl-10 pr-10 flex items-center justify-center text-5xl">
+        <div className="z-10 font-sans text-white-900 pl-10 pr-10 flex items-center justify-center text-5xl">
           Check your score!
         </div>
         <div className="text-center  pt-8 text-2xl text-[#5C5C5C]">
@@ -34,7 +34,7 @@ export default function Feedback() {
         <div className="float-right pr-10">
           <Button
             title="Download"
-            handlerEvent={() => handlerButton()}
+            onClick={() => handlerButton()}
           ></Button>
         </div>
       </div>

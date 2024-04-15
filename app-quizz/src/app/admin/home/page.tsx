@@ -1,10 +1,8 @@
 'use client';
 
-import renderQuestion from '../../utils/renderQuestion';
-import renderCategories from '../../utils/renderCategories';
-import Button from '../../components/Button/button';
+import Button from '../../../components/Button/button';
 import { useRouter } from 'next/navigation';
-import Navigation from '@/app/utils/homeNavigation';
+import Navigation from '@/utils/homeNavigation';
 
 export default function StepSix() {
   const router = useRouter();
@@ -39,7 +37,7 @@ export default function StepSix() {
 
               <Button
                 title="Create questions"
-                handlerEvent={() => handlerOpenQuestions()}
+                onClick={() => handlerOpenQuestions()}
                 style={classButtonOne}
               ></Button>
             </div>
