@@ -1,0 +1,204 @@
+Position’s Capabilities (SE),Area,Subjects,Tool / Framework / Libs,Level 1,Level 2,Level 3,Level 4,Level 5,Level 6
+Programming Language,Paradigm,OOP,Prototype,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Prototypal inheritance,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,,1 - Cannot perform,2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Structured,,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Functional,Currying,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Recursivity,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Others,Regex,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Language,JavaScript,Sintaxis/Semantics,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Functions (IIFE/anon/arrow),2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Data(Var/Types/Mgmt),2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Scope,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Closures,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,This,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Call/Bind/Apply,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Coercion,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Hoisting,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Destructuring,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Rest/Spreading,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Template Strings,1 - Cannot perform,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Object copy,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Object descriptors,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Event Loop,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Event Delegation / Event Handling / Bubbling,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Dom vs Document,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Dom Manipulation,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Exceptions,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,ES Modules,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Require JS,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,TypeScript,Types,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Generics,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Union Types,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Intersection Types,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Utility Types,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Namespaces,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Interfaces,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Enums,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Decorators,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Platform,OS,"Web Browsers (Chrome, Safari, Firefox, Edge)",2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Android Web Browsers,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,IOS Web Browsers,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Web Wrapper (Browser in App),1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Electron,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Node,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Package Management,NVM,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,NPM Modules,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,NPM/YARN,,,,,,
+,,,NPM Scripting,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Engine,ECMAScript,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,4 - Can perform without supervision
+,,,JS Engines (V8/JavaScriptCore/SpiderMonkey/Chakra),1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,4 - Can perform without supervision
+Software Architecture,Architecture types,Patterns,MVC/MV*,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Microfrontends,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Flux Architecture,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,JAMStack,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Reactive programming,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Offline First,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Microservices,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision
+,,,ETL,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision
+,,,SOA,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision
+,,,Publish/subscribe,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision
+,,,Data warehouse,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision
+,,Architecture Components,Web Components,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,DOM,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Custom Elements,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Shadow DOM,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSSOM,1 - Cannot perform,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,UI Markup HTML,HTML: Doctypes,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,HTML: Document metadata,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"HTML: Section elements (body, section, article, div, etc)",2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,"HTML: Grouping and Text elements (p, a, dl, etc)",2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,HTML: Semantic Markup,1 - Cannot perform,4 - Can perform without supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"HTML: Embedded content elements (picture, iframes, etc)",1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,HTML: Tables,2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,HTML: Forms,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"HTML: canvas, audio, video",1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,SVG,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,UI Styling CSS,CSS: Selectors (specificity/pseudo)        ,2 - Can perform with supervision,4 - Can perform without supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,"CSS: Layouting (float, inline-block, position, grid, flexbox)        ",1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSS: Box-Model        ,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSS: Units,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSS: Media-queries,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"CSS: Typography, Iconfonts        ",1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"CSS: CSS Architecture (BEM, SMACSS, OOCSS)",1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSS: CSS Transformations and Transitions,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"CSS: Preprocessors (SASS, LESS)",1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CSS: Postprocessors (PostCSS),1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Data Access / Persistency,Data Bases,"Inbrowser Databases (Firebase, Redis, CouchDB)",1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,IndexedDB,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,SQLite,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Object Persistency,LocalStorage,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,SessionStorage,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Cookies,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Application Lifecycle,Application Lifecycle,,,,,,,
+,Sys Integration,Web Services,HTTP Protocol,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,CORS,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,REST API,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,GraphQL,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Web Sockets,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Connectivity,Web USB API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Web Audio API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Web Bluetooth API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Geolocation API,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,MediaStream Image Capture API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,WebRTC API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Media Stream API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Media Recording API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Touch Events API,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,PWA,Push Notifications,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Caching,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Service Worker,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Manifest,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,App Shell,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Concurrency,Javascript,Web Workers,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Async / Await,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Promises,1 - Cannot perform,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others,5 - Can teach others
+,,,Timers,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Generators,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,NFRs,Performance,Browser caching,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,"Performance metrics (FCP, TTI, etc).",1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,RUM (Real User Monitoring).,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Performance API (timing),1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,RAIL model & Performance budgets.,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,"Performance audit tools: Chrome Dev Tools, Lighthouse, 
+Web Page Test.",1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Security,"Web Authentication (Open ID, SAML, OAuth, 
+JSON Web Token, Cookies)",1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,OWASP Top Ten,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,"2FactorAuth, OTP (One Time Passwords), Biometric auth",1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Accessibility,Web Content Accessibility Guidelines (WCAG) 2.1,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,WAI-ARIA markup,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Accessibility audit tools,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Localization,Internationalization API,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"Interpolation, Pluralization, Date/Money formatting",1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"Message formats (ICU, PO, etc).",1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,SEO,robots.txt and sitemap,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Metatags & Open Graph,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,"Structured Markup (microdata, json-ld, RDFa)",1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,SEO audit tools,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Analytics,A/B Testing,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Google Tag Manager,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Adobe Analytics,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+Software Engineer Practices,SOLID/DRY,SOLID/DRY,N/A,,,,,,
+,(T/B/D)DD,(T/B/D)DD,Karma/Jasmine/Sinon,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Protractor / Cypress,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Jest,1 - Cannot perform,3 - Can perform with limited supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Design Patterns,Creational,Abstract Factory,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Factory Method,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Javascript Builder,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Singleton,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Prototype,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Structural,Adapter,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Bridge,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Composite,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Decorator,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Facade,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Flyweight,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Proxy,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Behavior,Iterator,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Observer,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Command,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Chain of responsibility,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Interpreter,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Mediator,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Strategy,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,State,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Template Method,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Visitor,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Concurrency,Blockchain,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Messaging design pattern,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,Algorithm & Structures,Javascript Data Structures,JavaScript Datatypes,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,JavaScript Primitives,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,JavaScript Lists,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,JavaScript Trees,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,JavaScript Graphs,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Reactive Structures,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Specialization,Studio’s Practices Alignment,Hybrid Applications Ionic,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Hybrid Applications Cordova,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Cross Compiled Applications React Native,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Cross Compiled Applications Native Script,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Web Applications React,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Web Applications Angular,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Web Applications Vue,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,VR Applications,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,OTT,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,Industry,Headless CMS,1 - Cannot perform,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,5 - Can teach others
+,,,Banking,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,Yrs. of Experience,,,,,,,
+Build & Deploy,Code Organization (VCS),Code Organization (VCS),GIT,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Mono Repo,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Multi repo,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,Building/Packaging,Building/Packaging,Webpack,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,NPM/YARN,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,Transpilers (babel),1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,,,"Old Tools (Bower, Grunt)",1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others,5 - Can teach others
+,CI/CD,CI/CD,Jenkins,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Circle CI,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,Travis CI,1 - Cannot perform,1 - Cannot perform,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,,,,,,,,,
+SDLC,Estimation (high level / high confidence),N/A,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Prioritization/Dependencies,,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Risk Mgmt,,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Delegation & Follow Up,,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Go-Live Support,,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others
+,Methodologies,,,1 - Cannot perform,2 - Can perform with supervision,2 - Can perform with supervision,3 - Can perform with limited supervision,4 - Can perform without supervision,5 - Can teach others

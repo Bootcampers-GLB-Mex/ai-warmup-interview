@@ -7,3 +7,5 @@ uvicorn
 dependency-injector
 StrEnum
 pydantic-settings
+pandas
+python-json-logger
