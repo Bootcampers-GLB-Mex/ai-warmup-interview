@@ -27,14 +27,14 @@ const SignIn = () => {
           console.log(user, 'The following is the representation of our user.');
           setLoading(false);
           sessionStorage.setItem('user', true);
-          router.push('/admin');
+          router.push('/admin/home');
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setLoading(false);
           setErrors(errorMessage);
-          console.error(e);
+          console.error(errorMessage);
         });
     } catch (e) {
       setLoading(false);
