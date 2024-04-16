@@ -6,9 +6,10 @@ import { Formik, Form } from 'formik';
 import { browserSessionPersistence, setPersistence, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/app/authentication/firebase.config';
 import Button from '@/components/Button/button';
-import InputField from '@/components/UIField/uiField';
+import InputField from '@/components/InputField/InputField';
 import { validateAuthForm } from '../validations';
 import { FormValues } from '../schema';
+import { login } from '../api';
 
 export default function SignIn() {
   const [errors, setErrors] = useState('');
@@ -17,13 +18,7 @@ export default function SignIn() {
     try {
       await setPersistence(auth, browserSessionPersistence);
       const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password)
-      await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userCredential),
-      });
+      await login(userCredential);
     } catch (e: any) {
       const errorMessage = e.message;
       setErrors(errorMessage);

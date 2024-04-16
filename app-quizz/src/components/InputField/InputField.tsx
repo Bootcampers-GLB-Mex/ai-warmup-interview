@@ -6,7 +6,7 @@ export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 };
 const errorClassName = 'text-xs mt-2 text-red-600';
-const inputClassName = 'w-full p-3 bg-white rounded outline-none';
+const inputClassName = 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white';
 
 const InputField = ({label, name, className, ...props}: InputFieldProps) => {
   return (

@@ -5,7 +5,7 @@ import { Formik, Form } from 'formik';
 import { auth } from '@/app/authentication/firebase.config';
 import { validateAuthForm } from '@/app/authentication/validations';
 import Button from '@/components/Button/button';
-import InputField from '@/components/UIField/uiField';
+import InputField from '@/components/InputField/InputField';
 import { useRouter } from 'next/navigation';
 import { FormValues } from '../schema';
 
