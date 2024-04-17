@@ -46,15 +46,15 @@ export class WarmupService {
     return this.firestoreService.getInterviewTemplateById(interviewId);
   }
 
-  getInterviewTemplateQuestionsBySkillLevel(skillLevel: string): Promise<TemplateQuestionDto[]> {
-    return this.firestoreService.getInterviewTemplateQuestionsBySkillLevel(skillLevel);
+  getInterviewTemplateQuestionsBySkillLevel(interviewId: string, skillLevel: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsBySkillLevel(interviewId, skillLevel);
   }
 
-  getInterviewTemplateQuestionsByDevLevel(devLevel: string): Promise<TemplateQuestionDto[]> {
-    return this.firestoreService.getInterviewTemplateQuestionsByDevLevel(devLevel);
+  getInterviewTemplateQuestionsByDevLevel(interviewId: string, devLevel: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsByDevLevel(interviewId, devLevel);
   }
 
-  getInterviewTemplateQuestionsBySkillName(skillName: string): Promise<TemplateQuestionDto[]> {
-    return this.firestoreService.getInterviewTemplateQuestionsBySkillName(skillName);
+  getInterviewTemplateQuestionsBySkillName(interviewId: string, skillName: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsBySkillName(interviewId, skillName);
   }
 }

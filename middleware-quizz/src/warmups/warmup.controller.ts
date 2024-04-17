@@ -53,21 +53,24 @@ export class WarmupController {
   }
 
   @Get('/template/skill-level')
+  @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'skillLevel', required: true })
-  async getInterviewTemplateQuestionsBySkillLevel(@Query('skillLevel') skillLevel: string) {
-    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(skillLevel);
+  async getInterviewTemplateQuestionsBySkillLevel(@Query('interviewId') interviewId: string, @Query('skillLevel') skillLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(interviewId, skillLevel);
   }
 
   @Get('/template/position')
+  @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'devLevel', required: true })
-  async getInterviewTemplateQuestionsByDevLevel(@Query('devLevel') devLevel: string) {
-    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(devLevel);
+  async getInterviewTemplateQuestionsByDevLevel(@Query('interviewId') interviewId: string, @Query('devLevel') devLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(interviewId, devLevel);
   }
 
   @Get('/template/skill-name')
+  @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'skillName', required: true })
-  async getInterviewTemplateQuestionsBySkillName(@Query('skillName') skillName: string) {
-    return this.warmupService.getInterviewTemplateQuestionsBySkillName(skillName);
+  async getInterviewTemplateQuestionsBySkillName(@Query('interviewId') interviewId: string, @Query('skillName') skillName: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillName(interviewId, skillName);
   }
 
   @Post('/:id/answers')

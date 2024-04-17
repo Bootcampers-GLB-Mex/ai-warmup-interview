@@ -85,40 +85,37 @@ export class FirestoreService {
     return InterviewDto.fromFirestore(interviewDoc.data(), interviewId);
   }
 
-  async getInterviewTemplateQuestionsBySkillLevel(skillLevel: string): Promise<TemplateQuestionDto[]> {
-    return await this.db.collection('interviews').get().then(snapshot => {
+  async getInterviewTemplateQuestionsBySkillLevel(interviewId: string, skillLevel: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').doc(interviewId).get().then(snapshot => {
       var result = [];
-      snapshot.forEach(interview => {
-        interview.data().questions.filter(question => question.skill_level === skillLevel)
-        .forEach((found: any) => {
-          result.push(TemplateQuestionDto.fromFirestore(found));
-        });
+      snapshot.data().questions.filter(question => question.skill_level === skillLevel)
+      .forEach((found: any) => {
+        const dto = TemplateQuestionDto.fromFirestore(found);
+        result.push(dto);
       });
       return result;
     });
   }
 
-  async getInterviewTemplateQuestionsByDevLevel(devLevel: string): Promise<TemplateQuestionDto[]> {
-    return await this.db.collection('interviews').get().then(snapshot => {
+  async getInterviewTemplateQuestionsByDevLevel(interviewId: string, devLevel: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').doc(interviewId).get().then(snapshot => {
       var result = [];
-      snapshot.forEach(interview => {
-        interview.data().questions.filter(question => question.dev_level === devLevel)
-        .forEach((found: any) => {
-          result.push(TemplateQuestionDto.fromFirestore(found));
-        });
+      snapshot.data().questions.filter(question => question.dev_level === devLevel)
+      .forEach((found: any) => {
+        const dto = TemplateQuestionDto.fromFirestore(found);
+        result.push(dto);
       });
       return result;
     });
   }
 
-  async getInterviewTemplateQuestionsBySkillName(skillName: string): Promise<TemplateQuestionDto[]> {
-    return await this.db.collection('interviews').get().then(snapshot => {
+  async getInterviewTemplateQuestionsBySkillName(interviewId: string, skillName: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').doc(interviewId).get().then(snapshot => {
       var result = [];
-      snapshot.forEach(interview => {
-        interview.data().questions.filter(question => question.skill_name === skillName)
-        .forEach((found: any) => {
-          result.push(TemplateQuestionDto.fromFirestore(found));
-        });
+      snapshot.data().questions.filter(question => question.skill_name === skillName)
+      .forEach((found: any) => {
+        const dto = TemplateQuestionDto.fromFirestore(found);
+        result.push(dto);
       });
       return result;
     });
