@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Link from 'next/link';
 import { Formik, Form } from 'formik';
 import { browserSessionPersistence, setPersistence, signInWithEmailAndPassword } from 'firebase/auth';
@@ -9,7 +9,7 @@ import Button from '@/components/Button/button';
 import InputField from '@/components/InputField/InputField';
 import { validateAuthForm } from '../validations';
 import { FormValues } from '../schema';
-import { login } from '../api';
+import { doLogin } from '../actions';
 
 export default function SignIn() {
   const [errors, setErrors] = useState('');
@@ -18,7 +18,11 @@ export default function SignIn() {
     try {
       await setPersistence(auth, browserSessionPersistence);
       const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password)
-      await login(userCredential);
+      await doLogin(JSON.stringify({
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        username: userCredential.user.displayName,
+      }));
     } catch (e: any) {
       const errorMessage = e.message;
       setErrors(errorMessage);
