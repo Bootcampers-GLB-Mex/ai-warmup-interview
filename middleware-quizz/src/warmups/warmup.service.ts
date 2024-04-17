@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { FirestoreService } from 'src/firestore/firestore.service';
-import { UserDto, WarmupDto } from 'src/firestore/data.dto';
+import { InterviewDto, TemplateQuestionDto, UserDto, WarmupDto } from 'src/firestore/data.dto';
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
-import { DocumentData } from 'firebase-admin/firestore';
 
 @Injectable()
 export class WarmupService {
@@ -41,5 +40,21 @@ export class WarmupService {
 
   getWarmupById(userId: string, interviewId: string): Promise<WarmupDto> {
     return this.firestoreService.getWarmupInfoById(userId, interviewId);
+  }
+
+  getInterviewTemplateById(interviewId: string): Promise<InterviewDto> {
+    return this.firestoreService.getInterviewTemplateById(interviewId);
+  }
+
+  getInterviewTemplateQuestionsBySkillLevel(interviewId: string, skillLevel: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsBySkillLevel(interviewId, skillLevel);
+  }
+
+  getInterviewTemplateQuestionsByDevLevel(interviewId: string, devLevel: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsByDevLevel(interviewId, devLevel);
+  }
+
+  getInterviewTemplateQuestionsBySkillName(interviewId: string, skillName: string): Promise<TemplateQuestionDto[]> {
+    return this.firestoreService.getInterviewTemplateQuestionsBySkillName(interviewId, skillName);
   }
 }

@@ -45,6 +45,34 @@ export class WarmupController {
     return this.warmupService.getWarmupById(userId, interviewId);
   }
 
+  @Get('/template/interview-id')
+  @ApiQuery({ name: 'interviewId', required: true })
+  @ApiResponse({ status: 200, type: WarmupDto })
+  async getInterviewTemplateById(@Query('interviewId') interviewId: string) {
+    return this.warmupService.getInterviewTemplateById(interviewId);
+  }
+
+  @Get('/template/skill-level')
+  @ApiQuery({ name: 'interviewId', required: true })
+  @ApiQuery({ name: 'skillLevel', required: true })
+  async getInterviewTemplateQuestionsBySkillLevel(@Query('interviewId') interviewId: string, @Query('skillLevel') skillLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(interviewId, skillLevel);
+  }
+
+  @Get('/template/position')
+  @ApiQuery({ name: 'interviewId', required: true })
+  @ApiQuery({ name: 'devLevel', required: true })
+  async getInterviewTemplateQuestionsByDevLevel(@Query('interviewId') interviewId: string, @Query('devLevel') devLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(interviewId, devLevel);
+  }
+
+  @Get('/template/skill-name')
+  @ApiQuery({ name: 'interviewId', required: true })
+  @ApiQuery({ name: 'skillName', required: true })
+  async getInterviewTemplateQuestionsBySkillName(@Query('interviewId') interviewId: string, @Query('skillName') skillName: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillName(interviewId, skillName);
+  }
+
   @Post('/:id/answers')
   postWarmupAnswers(): WarmupsResponse {
     throw new Error('Not implemented');

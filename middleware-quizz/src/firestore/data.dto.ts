@@ -85,3 +85,40 @@ export class UserDto {
     };
   }
 }
+
+export class TemplateQuestionDto {
+  question: string;
+  devLevel: string;
+  skillLevel: string;
+  skillName: string;
+  answer: string;
+  
+  static fromFirestore(data: any): TemplateQuestionDto {
+    return {
+      question: data.question,
+      devLevel: data.dev_level,
+      skillLevel: data.skill_level,
+      skillName: data.skill_name,
+      answer: data.answer
+    };
+  }
+}
+
+export class InterviewDto {
+  @ApiProperty()
+  id: string;
+  @ApiProperty()
+  title: string;
+  @ApiProperty()
+  questions: TemplateQuestionDto[];
+  
+  static fromFirestore(data: any, interviewId: string): InterviewDto {
+    return {
+      id: interviewId,
+      title: data.interview_title,
+      questions: data.questions?.map((interview) =>
+        TemplateQuestionDto.fromFirestore(interview)
+      )
+    };
+  }
+}
