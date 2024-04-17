@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { initializeApp, cert } from 'firebase-admin/app';
 import { ConfigService } from '@nestjs/config';
-import { getFirestore, Firestore, DocumentData } from 'firebase-admin/firestore';
-import { Interview, UserDto, WarmupDto } from './data.dto';
+import { getFirestore, Firestore } from 'firebase-admin/firestore';
+import { InterviewDto, TemplateQuestionDto, UserDto, WarmupDto } from './data.dto';
 
 @Injectable()
 export class FirestoreService {
@@ -72,6 +72,55 @@ export class FirestoreService {
           result.push(WarmupDto.fromFirestore(found));
         });
         return result.length == 0 ? null : result[0];
+    });
+  }
+
+  async getInterviewTemplateById(interviewId: string): Promise<InterviewDto> {
+    const interviewRef = this.db.collection('interviews').doc(interviewId);
+    const interviewDoc = await interviewRef.get();
+    if (!interviewDoc.exists) {
+      return null;
+    }
+
+    return InterviewDto.fromFirestore(interviewDoc.data(), interviewId);
+  }
+
+  async getInterviewTemplateQuestionsBySkillLevel(skillLevel: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').get().then(snapshot => {
+      var result = [];
+      snapshot.forEach(interview => {
+        interview.data().questions.filter(question => question.skill_level === skillLevel)
+        .forEach((found: any) => {
+          result.push(TemplateQuestionDto.fromFirestore(found));
+        });
+      });
+      return result;
+    });
+  }
+
+  async getInterviewTemplateQuestionsByDevLevel(devLevel: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').get().then(snapshot => {
+      var result = [];
+      snapshot.forEach(interview => {
+        interview.data().questions.filter(question => question.dev_level === devLevel)
+        .forEach((found: any) => {
+          result.push(TemplateQuestionDto.fromFirestore(found));
+        });
+      });
+      return result;
+    });
+  }
+
+  async getInterviewTemplateQuestionsBySkillName(skillName: string): Promise<TemplateQuestionDto[]> {
+    return await this.db.collection('interviews').get().then(snapshot => {
+      var result = [];
+      snapshot.forEach(interview => {
+        interview.data().questions.filter(question => question.skill_name === skillName)
+        .forEach((found: any) => {
+          result.push(TemplateQuestionDto.fromFirestore(found));
+        });
+      });
+      return result;
     });
   }
 }

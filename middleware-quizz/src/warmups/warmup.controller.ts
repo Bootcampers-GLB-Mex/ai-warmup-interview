@@ -45,6 +45,31 @@ export class WarmupController {
     return this.warmupService.getWarmupById(userId, interviewId);
   }
 
+  @Get('/template/interview-id')
+  @ApiQuery({ name: 'interviewId', required: true })
+  @ApiResponse({ status: 200, type: WarmupDto })
+  async getInterviewTemplateById(@Query('interviewId') interviewId: string) {
+    return this.warmupService.getInterviewTemplateById(interviewId);
+  }
+
+  @Get('/template/skill-level')
+  @ApiQuery({ name: 'skillLevel', required: true })
+  async getInterviewTemplateQuestionsBySkillLevel(@Query('skillLevel') skillLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(skillLevel);
+  }
+
+  @Get('/template/position')
+  @ApiQuery({ name: 'devLevel', required: true })
+  async getInterviewTemplateQuestionsByDevLevel(@Query('devLevel') devLevel: string) {
+    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(devLevel);
+  }
+
+  @Get('/template/skill-name')
+  @ApiQuery({ name: 'skillName', required: true })
+  async getInterviewTemplateQuestionsBySkillName(@Query('skillName') skillName: string) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillName(skillName);
+  }
+
   @Post('/:id/answers')
   postWarmupAnswers(): WarmupsResponse {
     throw new Error('Not implemented');
