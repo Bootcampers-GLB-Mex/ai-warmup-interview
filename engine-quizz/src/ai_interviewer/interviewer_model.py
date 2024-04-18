@@ -2,6 +2,7 @@ from langchain_core.globals import set_debug
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
+import json
 
 from src.constants import FEEDBACK_PROMPT_TEMPLATE
 from src.llm import LLMClient
@@ -25,6 +26,8 @@ class InterviewerModel:
     }
     | self.prompt
     | self.llm
-    | StrOutputParser())
+    | StrOutputParser()
+    | (lambda x: json.loads(x)))
+  
     return chain.invoke({"answer": answer, "question": question, "context": [QuestionContextDocument.build_document(question, context)]})
 

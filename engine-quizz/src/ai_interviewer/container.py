@@ -22,5 +22,5 @@ class Container(containers.DeclarativeContainer):
 
   interviewer_model = providers.Singleton(InterviewerModel, llm_client, logger)
 
-  interviewer_service = providers.Singleton(InterviewerService, interviewer_model)
+  interviewer_service = providers.Singleton(InterviewerService, interviewer_model, logger)
 

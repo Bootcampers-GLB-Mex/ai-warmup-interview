@@ -19,10 +19,8 @@ CONTEXT:
 Return the EVALUATION as a json with the following structure:
 ###
 {{{{
-  category: <CATEGORY>,
-  score: <SCORE>,
-  feedback: <FEEDBACK>,
-  correct_answer: <CORRECT_ANSWER>
+  "score": <SCORE>,
+  "feedback": <FEEDBACK>,
 }}}}
 ###
 
