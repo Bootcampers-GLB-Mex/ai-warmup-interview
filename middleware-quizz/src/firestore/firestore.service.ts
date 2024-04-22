@@ -181,12 +181,25 @@ export class FirestoreService {
       });
   }
 
-  async saveFeedback(userId: string, feedback: any) {
+  async saveFeedback(userId: string, interviews: any) {
+    return await this.db.collection('users').doc(userId).update({
+      interviews,
+    });
+  }
+
+  async saveWarmup(userId: string, interviewId: string, questions: any) {
     return await this.db
       .collection('users')
       .doc(userId)
-      .update({
-        feedbacks: FieldValue.arrayUnion(feedback),
+      .set({
+        interviews: FieldValue.arrayUnion({
+          interview_id: interviewId,
+          questions,
+          status: 'Done',
+          level: '4',
+          role: 'Web UI Developer',
+          title: 'Senior Web UI Developer',
+        }),
       });
   }
 }

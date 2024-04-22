@@ -1,9 +1,10 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { WarmupsResponse } from './responses.schema';
 import { WarmupService } from './warmup.service';
 import { ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { WarmupDto } from 'src/firestore/data.dto';
 import { Query } from '@nestjs/common';
+import { QuestionWarmupRequestDTO } from './requests.dto';
 
 @Controller('/interviews')
 export class WarmupController {
@@ -33,7 +34,10 @@ export class WarmupController {
   @ApiQuery({ name: 'userId', required: true })
   @ApiQuery({ name: 'accessCode', required: true })
   @ApiResponse({ status: 200, type: WarmupDto })
-  async getWarmupByAccessCode(@Query('userId') userId: string, @Query('accessCode') accessCode: string) {
+  async getWarmupByAccessCode(
+    @Query('userId') userId: string,
+    @Query('accessCode') accessCode: string,
+  ) {
     return this.warmupService.getWarmupByAccessCode(userId, accessCode);
   }
 
@@ -41,7 +45,10 @@ export class WarmupController {
   @ApiQuery({ name: 'userId', required: true })
   @ApiQuery({ name: 'interviewId', required: true })
   @ApiResponse({ status: 200, type: WarmupDto })
-  async getWarmup(@Query('userId') userId: string, @Query('interviewId') interviewId: string) {
+  async getWarmup(
+    @Query('userId') userId: string,
+    @Query('interviewId') interviewId: string,
+  ) {
     return this.warmupService.getWarmupById(userId, interviewId);
   }
 
@@ -55,27 +62,49 @@ export class WarmupController {
   @Get('/template/skill-level')
   @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'skillLevel', required: true })
-  async getInterviewTemplateQuestionsBySkillLevel(@Query('interviewId') interviewId: string, @Query('skillLevel') skillLevel: string) {
-    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(interviewId, skillLevel);
+  async getInterviewTemplateQuestionsBySkillLevel(
+    @Query('interviewId') interviewId: string,
+    @Query('skillLevel') skillLevel: string,
+  ) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillLevel(
+      interviewId,
+      skillLevel,
+    );
   }
 
   @Get('/template/position')
   @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'devLevel', required: true })
-  async getInterviewTemplateQuestionsByDevLevel(@Query('interviewId') interviewId: string, @Query('devLevel') devLevel: string) {
-    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(interviewId, devLevel);
+  async getInterviewTemplateQuestionsByDevLevel(
+    @Query('interviewId') interviewId: string,
+    @Query('devLevel') devLevel: string,
+  ) {
+    return this.warmupService.getInterviewTemplateQuestionsByDevLevel(
+      interviewId,
+      devLevel,
+    );
   }
 
   @Get('/template/skill-name')
   @ApiQuery({ name: 'interviewId', required: true })
   @ApiQuery({ name: 'skillName', required: true })
-  async getInterviewTemplateQuestionsBySkillName(@Query('interviewId') interviewId: string, @Query('skillName') skillName: string) {
-    return this.warmupService.getInterviewTemplateQuestionsBySkillName(interviewId, skillName);
+  async getInterviewTemplateQuestionsBySkillName(
+    @Query('interviewId') interviewId: string,
+    @Query('skillName') skillName: string,
+  ) {
+    return this.warmupService.getInterviewTemplateQuestionsBySkillName(
+      interviewId,
+      skillName,
+    );
   }
 
-  @Post('/:id/answers')
-  postWarmupAnswers(): WarmupsResponse {
-    throw new Error('Not implemented');
+  @Post('/answers')
+  postWarmupAnswers(
+    @Body('questions') questions: QuestionWarmupRequestDTO[],
+    @Body('interviewId') interviewId: string,
+    @Body('userId') userId: string,
+  ) {
+    this.warmupService.saveUserWarmup(userId, interviewId, questions);
   }
 
   @Post('/:id/feedback/status')

@@ -17,10 +17,28 @@ export class FeedbackService {
     );
 
     try {
-      await this.firestoreService.saveFeedback(createFeedbackDto.userId, {
-        interviewId: createFeedbackDto.interviewId,
-        feedback: createFeedbackDto.feedback,
+      const userInfo = await this.firestoreService.getUserInfo(
+        createFeedbackDto.userId,
+      );
+
+      const interviewFeedback = userInfo.interviews.map((interview) => {
+        if (interview.id === createFeedbackDto.interviewId) {
+          interview.questions = interview.questions.map((question) => {
+            const feedback = createFeedbackDto.feedback.find(
+              (feedback) => feedback.questionId === question.id,
+            );
+            question.feedback = feedback.feedback;
+            question.score = `${feedback.score}`;
+            return question;
+          });
+        }
+        return interview;
       });
+
+      await this.firestoreService.saveFeedback(
+        createFeedbackDto.userId,
+        interviewFeedback,
+      );
 
       this.logger.info('Feedback created');
     } catch (error) {

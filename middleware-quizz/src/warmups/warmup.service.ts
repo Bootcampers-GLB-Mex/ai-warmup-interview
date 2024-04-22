@@ -7,6 +7,7 @@ import {
   WarmupDto,
 } from 'src/firestore/data.dto';
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
+import { FeedbackQuestionsRequest, QuestionWarmupRequestDTO, WarmupFirestore } from './requests.dto';
 
 @Injectable()
 export class WarmupService {
@@ -81,5 +82,42 @@ export class WarmupService {
       interviewId,
       skillName,
     );
+  }
+
+  async saveUserWarmup(
+    userId: string,
+    interviewId: string,
+    warmup: QuestionWarmupRequestDTO[],
+  ): Promise<void> {
+    try {
+      const interview = WarmupFirestore.fromRequest(
+        interviewId,
+        userId,
+        warmup,
+      );
+      await this.firestoreService.saveWarmup(userId, interviewId, interview);
+      this.logger.info(`User ${userId} saved warmup ${interviewId}`);
+
+      const resp = await fetch(
+        'http://localhost:8000/api/v1/interviewer/feedback',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            questions: FeedbackQuestionsRequest.fromQuestionsFirestore(
+              interview.questions,
+            ),
+            interview_id: interviewId,
+            user_id: userId,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        },
+      );
+      const result = await resp.json();
+      this.logger.info(`Feedback response: ${result}`);
+    } catch (error) {
+      this.logger.error(error);
+    }
   }
 }
