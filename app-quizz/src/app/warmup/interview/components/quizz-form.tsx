@@ -48,12 +48,12 @@ export const QuizzForm = () => {
   const requestFeedback = (answers: string[], questions: QuestionResponse[]) => {
     const answersPostData: PostDataQuestion[] = answers.map((answer, index) => {
       return {
-        ...questions[index],
+        questionId: questions[index].id,
+        question: questions[index].question,
         answer: answer,
-        compareAnswer: questions[index].answer,
       };
     });
-    postData(answersPostData, 'KSchtFol3eaEtLilJ3VJ', '0gwER9u4MA6sPrGmZ931')
+    postData(answersPostData, 'KSchtFol3eaEtLilJ3VJ', 'oCOsUxCdN0p2O5WAYGWS')
   };
 
   const onEndForm = () => {

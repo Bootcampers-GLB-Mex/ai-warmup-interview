@@ -7,6 +7,7 @@ import {
   UserInterviewFirestore,
 } from './firestore.schemas';
 import { QuestionWarmupRequestDto } from 'src/warmups/requests.dto';
+import { Feedback } from 'src/feedback/feedback.dto';
 
 export class Path {
   segments: string[];
@@ -78,8 +79,7 @@ export class UserInterviewQuestionsDto {
       questions: questions.map((question, index) => ({
         id: `Q${index + 1}`,
         question: question.question,
-        context: question.skillName,
-        answer: question.answer,
+        context: question.answer,
       })),
     };
   }
@@ -93,6 +93,19 @@ export class UserInterviewQuestionsDto {
         ...question,
         answer: answers.find((answer) => answer.questionId === question.id)
           .answer,
+      })),
+    };
+  }
+
+  static fromFeedback(
+    questions: UserInterviewQuestionsDto,
+    feedback: Feedback[],
+  ): UserInterviewQuestionsDto {
+    return {
+      questions: questions.questions.map((question) => ({
+        ...question,
+        feedback: feedback.find((fb) => fb.questionId === question.id).feedback,
+        score: `${feedback.find((fb) => fb.questionId === question.id).score}`,
       })),
     };
   }

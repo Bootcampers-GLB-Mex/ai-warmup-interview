@@ -1,51 +1,39 @@
 export interface QuestionResponse {
+  id: string;
   question: string;
-  devLevel: string;
-  skillLevel: string;
-  skillName: string;
-  answer: string;
+  context: string;
+  answer?: string;
+  feedback?: string;
+  score?: string;
 }
 
 export interface InterviewResponse {
   id: string;
   title: string;
-  questions: QuestionResponse[];
+  status: string;
+  role: string;
+  level: string;
+  questions: {questions: QuestionResponse[]};
 }
-export async function fetchData(interviewId: string) {
+export async function fetchData() {
   const response = await fetch(
-    `http://localhost:3003/interviews/template/interview-id?interviewId=${interviewId}`
+    `http://localhost:3003/interviews/random`, {
+      method: "POST",
+      body: JSON.stringify({
+        userId: "oCOsUxCdN0p2O5WAYGWS"
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
   );
   const result: InterviewResponse = await response.json();
-
-  const getRandomElements = (result: InterviewResponse): QuestionResponse[] => {
-    const randomElements: QuestionResponse[] = [];
-
-    const questions = result.questions.filter((question) => question.skillLevel === 'Can perform without supervision');
-    const totalQuestions = questions.length;
-    const numElements = Math.min(totalQuestions, 5); // Ensure we don't exceed the number of available questions
-    
-    while (randomElements.length < numElements) {
-      const randomIndex = Math.floor(Math.random() * totalQuestions);
-      const randomQuestion = questions[randomIndex];
-
-      if (!randomElements.includes(randomQuestion)) {
-        randomElements.push(randomQuestion);
-      }
-    }
-
-    return randomElements;
-  };
-
-  const randomQuestions = getRandomElements(result);
-  return randomQuestions;
+  return result;
 }
 
 export interface PostDataQuestion {
+  questionId: string;
   question: string;
-  devLevel: string;
-  skillLevel: string;
-  skillName: string;
-  compareAnswer: string;
   answer: string;
 }
 export async function postData(

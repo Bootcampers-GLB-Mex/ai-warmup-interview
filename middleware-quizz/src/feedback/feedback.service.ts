@@ -3,6 +3,10 @@ import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
 import { WarmupService } from 'src/warmups/warmup.service';
 import { CreateFeedbackDto } from './feedback.dto';
 import { FirestoreService } from 'src/firestore/firestore.service';
+import {
+  UserInterviewQuestionsDto,
+  UserInterviewsDto,
+} from 'src/firestore/data.dto';
 
 @Injectable()
 export class FeedbackService {
@@ -17,27 +21,25 @@ export class FeedbackService {
     );
 
     try {
-      const userInfo = await this.firestoreService.getUserInfo(
+      const interview = await this.firestoreService.getUserInterviewById(
+        createFeedbackDto.userId,
+        createFeedbackDto.interviewId,
+      );
+
+      interview.questions = UserInterviewQuestionsDto.fromFeedback(
+        interview.questions,
+        createFeedbackDto.feedback,
+      );
+
+      const interviews = await this.firestoreService.getUserInterviews(
         createFeedbackDto.userId,
       );
 
-      const interviewFeedback = userInfo.interviews.map((interview) => {
-        if (interview.id === createFeedbackDto.interviewId) {
-          interview.questions = interview.questions.map((question) => {
-            const feedback = createFeedbackDto.feedback.find(
-              (feedback) => feedback.questionId === question.id,
-            );
-            question.feedback = feedback.feedback;
-            question.score = `${feedback.score}`;
-            return question;
-          });
-        }
-        return interview;
-      });
-
-      await this.firestoreService.saveFeedback(
+      await this.firestoreService.setUserInterview(
         createFeedbackDto.userId,
-        interviewFeedback,
+        UserInterviewsDto.toFirestore(
+          UserInterviewsDto.fromInterview(interviews, interview),
+        ),
       );
 
       this.logger.info('Feedback created');

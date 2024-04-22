@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-class Feedback {
+export class Feedback {
   @ApiProperty()
   questionId: string;
   @ApiProperty()

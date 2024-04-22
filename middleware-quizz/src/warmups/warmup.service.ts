@@ -94,6 +94,9 @@ export class WarmupService {
       await this.firestoreService.getInterviewTemplateById(
         'KSchtFol3eaEtLilJ3VJ',
       );
+    this.logger.info(
+      `Template questions: ${interviewTemplate.questions.questions.length}`,
+    );
     const randomQuestions = UserInterviewQuestionsDto.fromTemplateQuestions(
       getRandomElements(interviewTemplate.questions.questions),
     );
@@ -141,7 +144,7 @@ export class WarmupService {
       this.logger.info(`User ${userId} saved warmup ${interviewId}`);
 
       const resp = await fetch(
-        'http://localhost:8000/api/v1/interviewer/feedback',
+        'http://127.0.0.1:8000/api/v1/interviewer/feedback',
         {
           method: 'POST',
           body: JSON.stringify({

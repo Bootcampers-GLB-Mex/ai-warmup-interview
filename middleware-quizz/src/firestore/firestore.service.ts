@@ -24,6 +24,7 @@ export class FirestoreService {
       credential: cert(appConfigService.get('googleApplicationCredentials')),
     });
     this.db = getFirestore();
+    this.db.settings({ ignoreUndefinedProperties: true });
   }
 
   async getUserInfo(userId: string): Promise<UserDto> {

@@ -87,7 +87,7 @@ export class WarmupController {
     );
   }
 
-  @Post('/interview')
+  @Post('/random')
   createUserInterview(@Body('userId') userId: string) {
     return this.warmupService.createRandomUserInterview(userId);
   }
