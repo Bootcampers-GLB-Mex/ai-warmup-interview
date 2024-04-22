@@ -4,10 +4,16 @@ import { ConfigService } from '@nestjs/config';
 import { getFirestore, Firestore, FieldValue } from 'firebase-admin/firestore';
 import {
   InterviewDto,
-  TemplateQuestionDto,
+  TemplateQuestionsDto,
   UserDto,
-  WarmupDto,
+  UserInterviewDto,
+  UserInterviewsDto,
 } from './data.dto';
+import {
+  UserFirestore,
+  UserInterviewFirestore,
+  InterviewFirestore,
+} from './firestore.schemas';
 
 @Injectable()
 export class FirestoreService {
@@ -27,85 +33,41 @@ export class FirestoreService {
       return null;
     }
 
-    return UserDto.fromFirestore(userDoc.data(), userId);
+    return UserDto.fromFirestore(userDoc.data() as UserFirestore, userId);
   }
 
-  async getUserWarmups(userId: string): Promise<WarmupDto[]> {
+  async getUserInterviews(userId: string): Promise<UserInterviewsDto> {
     const userRef = this.db.collection('users').doc(userId);
     const userDoc = await userRef.get();
     if (!userDoc.exists) {
       return null;
     }
-    const interviews = userDoc.get('interviews');
+    const interviews: UserInterviewFirestore[] = userDoc.get('interviews');
 
-    const mapped = [];
-    interviews.forEach(function (element: any) {
-      mapped.push(WarmupDto.fromFirestore(element));
-    });
-
-    return mapped;
+    return UserInterviewsDto.fromFirestore(interviews);
   }
 
-  async getCompletedWarmups(userId: string): Promise<WarmupDto[]> {
-    return await this.db
-      .collection('users')
-      .doc(userId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .interviews.filter((interview) => interview.status === 'Done')
-          .forEach((doneInterview: any) => {
-            const dto = WarmupDto.fromFirestore(doneInterview);
-            result.push(dto);
-          });
-        return result;
-      });
+  async getCompletedWarmups(userId: string): Promise<UserInterviewsDto> {
+    const snapshot = await this.db.collection('users').doc(userId).get();
+    const interviews = snapshot.data().interviews;
+    const interviewsDone = interviews.filter(
+      (interview) => interview.status === 'Done',
+    );
+    return UserInterviewsDto.fromFirestore(interviewsDone);
   }
 
-  async getWarmupInfoByAccessCode(
-    userId: string,
-    accessCode: string,
-  ): Promise<WarmupDto> {
-    return await this.db
-      .collection('users')
-      .doc(userId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .interviews.filter(
-            (interview) => interview.access_code === accessCode,
-          )
-          .forEach((found: any) => {
-            result.push(WarmupDto.fromFirestore(found));
-          });
-        return result.length == 0 ? null : result[0];
-      });
-  }
-
-  async getWarmupInfoById(
+  async getUserInterviewById(
     userId: string,
     interviewId: string,
-  ): Promise<WarmupDto> {
-    return await this.db
-      .collection('users')
-      .doc(userId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .interviews.filter(
-            (interview) => interview.interview_id === interviewId,
-          )
-          .forEach((found: any) => {
-            result.push(WarmupDto.fromFirestore(found));
-          });
-        return result.length == 0 ? null : result[0];
-      });
+  ): Promise<UserInterviewDto> {
+    const snapshot = await this.db.collection('users').doc(userId).get();
+    const interviews: UserInterviewFirestore[] = snapshot.data().interviews;
+    const interviewsFound = interviews.filter(
+      (interview) => interview.interview_id === interviewId,
+    );
+    return interviewsFound.length > 0
+      ? UserInterviewDto.fromFirestore(interviewsFound[0])
+      : null;
   }
 
   async getInterviewTemplateById(interviewId: string): Promise<InterviewDto> {
@@ -115,69 +77,64 @@ export class FirestoreService {
       return null;
     }
 
-    return InterviewDto.fromFirestore(interviewDoc.data(), interviewId);
+    return InterviewDto.fromFirestore(
+      interviewDoc.data() as InterviewFirestore,
+      interviewId,
+    );
   }
 
   async getInterviewTemplateQuestionsBySkillLevel(
     interviewId: string,
     skillLevel: string,
-  ): Promise<TemplateQuestionDto[]> {
-    return await this.db
+  ): Promise<TemplateQuestionsDto> {
+    const snapshot = await this.db
       .collection('interviews')
       .doc(interviewId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .questions.filter((question) => question.skill_level === skillLevel)
-          .forEach((found: any) => {
-            const dto = TemplateQuestionDto.fromFirestore(found);
-            result.push(dto);
-          });
-        return result;
-      });
+      .get();
+    const questions = snapshot.data().questions;
+    const questionsFiltered = questions.filter(
+      (question) => question.skill_level === skillLevel,
+    );
+    return TemplateQuestionsDto.fromFirestore(questionsFiltered);
   }
 
   async getInterviewTemplateQuestionsByDevLevel(
     interviewId: string,
     devLevel: string,
-  ): Promise<TemplateQuestionDto[]> {
-    return await this.db
+  ): Promise<TemplateQuestionsDto> {
+    const snapshot = await this.db
       .collection('interviews')
       .doc(interviewId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .questions.filter((question) => question.dev_level === devLevel)
-          .forEach((found: any) => {
-            const dto = TemplateQuestionDto.fromFirestore(found);
-            result.push(dto);
-          });
-        return result;
-      });
+      .get();
+    const questions = snapshot
+      .data()
+      .questions.filter((question) => question.dev_level === devLevel);
+    return TemplateQuestionsDto.fromFirestore(questions);
   }
 
   async getInterviewTemplateQuestionsBySkillName(
     interviewId: string,
     skillName: string,
-  ): Promise<TemplateQuestionDto[]> {
-    return await this.db
+  ): Promise<TemplateQuestionsDto> {
+    const snapshot = await this.db
       .collection('interviews')
       .doc(interviewId)
-      .get()
-      .then((snapshot) => {
-        const result = [];
-        snapshot
-          .data()
-          .questions.filter((question) => question.skill_name === skillName)
-          .forEach((found: any) => {
-            const dto = TemplateQuestionDto.fromFirestore(found);
-            result.push(dto);
-          });
-        return result;
+      .get();
+    const questions = snapshot
+      .data()
+      .questions.filter((question) => question.skill_name === skillName);
+    return TemplateQuestionsDto.fromFirestore(questions);
+  }
+
+  async updateUserInterviews(
+    userId: string,
+    interview: UserInterviewFirestore,
+  ) {
+    return await this.db
+      .collection('users')
+      .doc(userId)
+      .update({
+        interviews: FieldValue.arrayUnion(interview),
       });
   }
 
@@ -187,19 +144,9 @@ export class FirestoreService {
     });
   }
 
-  async saveWarmup(userId: string, interviewId: string, questions: any) {
-    return await this.db
-      .collection('users')
-      .doc(userId)
-      .set({
-        interviews: FieldValue.arrayUnion({
-          interview_id: interviewId,
-          questions,
-          status: 'Done',
-          level: '4',
-          role: 'Web UI Developer',
-          title: 'Senior Web UI Developer',
-        }),
-      });
+  async setUserInterview(userId: string, interviews: UserInterviewFirestore[]) {
+    return await this.db.collection('users').doc(userId).set({
+      interviews,
+    });
   }
 }

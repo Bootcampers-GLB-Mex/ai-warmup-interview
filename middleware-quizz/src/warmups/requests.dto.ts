@@ -4,6 +4,7 @@ import {
   OrderByCriteria,
   WarmupsRequest,
 } from './requests.schema';
+import { UserInterviewQuestionDto } from 'src/firestore/data.dto';
 
 export class WarmupsRequestDTO implements WarmupsRequest {
   @ApiProperty()
@@ -19,55 +20,13 @@ export class WarmupsRequestDTO implements WarmupsRequest {
   limit: number;
 }
 
-export class QuestionWarmupRequestDTO {
+export class QuestionWarmupRequestDto {
   @ApiProperty()
-  question: string;
-  @ApiProperty()
-  devLevel: string;
-  @ApiProperty()
-  skillLevel: string;
-  @ApiProperty()
-  skillName: string;
-  @ApiProperty()
-  compareAnswer: string;
-  @ApiProperty()
-  answer: string;
-}
-
-interface QuestionsFirestore {
-  question: string;
   questionId: string;
-  devLevel: string;
-  skillLevel: string;
-  skillName: string;
-  compareAnswer: string;
+  @ApiProperty()
+  question: string;
+  @ApiProperty()
   answer: string;
-}
-
-export class WarmupFirestore {
-  questions: QuestionsFirestore[];
-  interviewId: string;
-  userId: string;
-
-  static fromRequest(
-    interviewId: string,
-    userId: string,
-    questions: QuestionWarmupRequestDTO[],
-  ): WarmupFirestore {
-    return {
-      interviewId,
-      userId,
-      questions: questions.map((question, index) => ({
-        question: question.question,
-        questionId: `Q${index + 1}`,
-        devLevel: question.devLevel,
-        skillLevel: question.skillLevel,
-        skillName: question.skillName,
-        compareAnswer: question.compareAnswer,
-        answer: question.answer,
-      })),
-    };
-  }
 }
 
 export class FeedbackQuestionsRequest {
@@ -76,14 +35,14 @@ export class FeedbackQuestionsRequest {
   answer: string;
   compare_answer: string;
 
-  static fromQuestionsFirestore(
-    questions: QuestionsFirestore[],
+  static fromUserInterviewQuestions(
+    questions: UserInterviewQuestionDto[],
   ): FeedbackQuestionsRequest[] {
     return questions.map((question) => ({
       question: question.question,
-      question_id: question.questionId,
+      question_id: question.id,
       answer: question.answer,
-      compare_answer: question.compareAnswer,
+      compare_answer: question.context,
     }));
   }
 }

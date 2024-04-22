@@ -2,9 +2,9 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { WarmupsResponse } from './responses.schema';
 import { WarmupService } from './warmup.service';
 import { ApiQuery, ApiResponse } from '@nestjs/swagger';
-import { WarmupDto } from 'src/firestore/data.dto';
+import { UserInterviewDto } from 'src/firestore/data.dto';
 import { Query } from '@nestjs/common';
-import { QuestionWarmupRequestDTO } from './requests.dto';
+import { QuestionWarmupRequestDto } from './requests.dto';
 
 @Controller('/interviews')
 export class WarmupController {
@@ -30,21 +30,10 @@ export class WarmupController {
     return this.warmupService.getCompletedWarmups(userId);
   }
 
-  @Get('/access-code')
-  @ApiQuery({ name: 'userId', required: true })
-  @ApiQuery({ name: 'accessCode', required: true })
-  @ApiResponse({ status: 200, type: WarmupDto })
-  async getWarmupByAccessCode(
-    @Query('userId') userId: string,
-    @Query('accessCode') accessCode: string,
-  ) {
-    return this.warmupService.getWarmupByAccessCode(userId, accessCode);
-  }
-
   @Get('/interview-id')
   @ApiQuery({ name: 'userId', required: true })
   @ApiQuery({ name: 'interviewId', required: true })
-  @ApiResponse({ status: 200, type: WarmupDto })
+  @ApiResponse({ status: 200, type: UserInterviewDto })
   async getWarmup(
     @Query('userId') userId: string,
     @Query('interviewId') interviewId: string,
@@ -54,7 +43,7 @@ export class WarmupController {
 
   @Get('/template/interview-id')
   @ApiQuery({ name: 'interviewId', required: true })
-  @ApiResponse({ status: 200, type: WarmupDto })
+  @ApiResponse({ status: 200, type: UserInterviewDto })
   async getInterviewTemplateById(@Query('interviewId') interviewId: string) {
     return this.warmupService.getInterviewTemplateById(interviewId);
   }
@@ -98,9 +87,14 @@ export class WarmupController {
     );
   }
 
+  @Post('/interview')
+  createUserInterview(@Body('userId') userId: string) {
+    return this.warmupService.createRandomUserInterview(userId);
+  }
+
   @Post('/answers')
   postWarmupAnswers(
-    @Body('questions') questions: QuestionWarmupRequestDTO[],
+    @Body('questions') questions: QuestionWarmupRequestDto[],
     @Body('interviewId') interviewId: string,
     @Body('userId') userId: string,
   ) {

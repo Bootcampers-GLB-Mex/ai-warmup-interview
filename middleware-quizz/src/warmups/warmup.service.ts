@@ -2,12 +2,18 @@ import { Injectable } from '@nestjs/common';
 import { FirestoreService } from 'src/firestore/firestore.service';
 import {
   InterviewDto,
-  TemplateQuestionDto,
+  TemplateQuestionsDto,
   UserDto,
-  WarmupDto,
+  UserInterviewDto,
+  UserInterviewQuestionsDto,
+  UserInterviewsDto,
 } from 'src/firestore/data.dto';
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
-import { FeedbackQuestionsRequest, QuestionWarmupRequestDTO, WarmupFirestore } from './requests.dto';
+import {
+  FeedbackQuestionsRequest,
+  QuestionWarmupRequestDto,
+} from './requests.dto';
+import { getRandomElements } from './utils';
 
 @Injectable()
 export class WarmupService {
@@ -24,30 +30,29 @@ export class WarmupService {
     return await this.firestoreService.getUserInfo(userId);
   }
 
-  async getUserWarmups(userId: string): Promise<WarmupDto[]> {
-    const userInterviews = await this.firestoreService.getUserWarmups(userId);
-    this.logger.info(`User ${userId} has ${userInterviews.length} warmups`);
+  async getUserWarmups(userId: string): Promise<UserInterviewsDto> {
+    const userInterviews =
+      await this.firestoreService.getUserInterviews(userId);
+    this.logger.info(
+      `User ${userId} has ${userInterviews.interviews.length} warmups`,
+    );
     return userInterviews;
   }
 
-  async getCompletedWarmups(userId: string): Promise<WarmupDto[]> {
+  async getCompletedWarmups(userId: string): Promise<UserInterviewsDto> {
     const completedInterviews =
       await this.firestoreService.getCompletedWarmups(userId);
     this.logger.info(
-      `User ${userId} has completed ${completedInterviews.length} warmups`,
+      `User ${userId} has completed ${completedInterviews.interviews.length} warmups`,
     );
     return completedInterviews;
   }
 
-  getWarmupByAccessCode(
+  getWarmupById(
     userId: string,
-    accessCode: string,
-  ): Promise<WarmupDto> {
-    return this.firestoreService.getWarmupInfoByAccessCode(userId, accessCode);
-  }
-
-  getWarmupById(userId: string, interviewId: string): Promise<WarmupDto> {
-    return this.firestoreService.getWarmupInfoById(userId, interviewId);
+    interviewId: string,
+  ): Promise<UserInterviewDto> {
+    return this.firestoreService.getUserInterviewById(userId, interviewId);
   }
 
   getInterviewTemplateById(interviewId: string): Promise<InterviewDto> {
@@ -57,7 +62,7 @@ export class WarmupService {
   getInterviewTemplateQuestionsBySkillLevel(
     interviewId: string,
     skillLevel: string,
-  ): Promise<TemplateQuestionDto[]> {
+  ): Promise<TemplateQuestionsDto> {
     return this.firestoreService.getInterviewTemplateQuestionsBySkillLevel(
       interviewId,
       skillLevel,
@@ -67,7 +72,7 @@ export class WarmupService {
   getInterviewTemplateQuestionsByDevLevel(
     interviewId: string,
     devLevel: string,
-  ): Promise<TemplateQuestionDto[]> {
+  ): Promise<TemplateQuestionsDto> {
     return this.firestoreService.getInterviewTemplateQuestionsByDevLevel(
       interviewId,
       devLevel,
@@ -77,25 +82,62 @@ export class WarmupService {
   getInterviewTemplateQuestionsBySkillName(
     interviewId: string,
     skillName: string,
-  ): Promise<TemplateQuestionDto[]> {
+  ): Promise<TemplateQuestionsDto> {
     return this.firestoreService.getInterviewTemplateQuestionsBySkillName(
       interviewId,
       skillName,
     );
   }
 
+  async createRandomUserInterview(userId: string) {
+    const interviewTemplate =
+      await this.firestoreService.getInterviewTemplateById(
+        'KSchtFol3eaEtLilJ3VJ',
+      );
+    const randomQuestions = UserInterviewQuestionsDto.fromTemplateQuestions(
+      getRandomElements(interviewTemplate.questions.questions),
+    );
+    const interview = new UserInterviewDto();
+    interview.id = 'KSchtFol3eaEtLilJ3VJ';
+    interview.title = 'Senior Developer';
+    interview.status = 'NEW';
+    interview.role = 'Developer';
+    interview.level = 'Senior';
+    interview.questions = randomQuestions;
+
+    await this.firestoreService.updateUserInterviews(
+      userId,
+      UserInterviewDto.toFirestore(interview),
+    );
+
+    return interview;
+  }
+
   async saveUserWarmup(
     userId: string,
     interviewId: string,
-    warmup: QuestionWarmupRequestDTO[],
+    warmup: QuestionWarmupRequestDto[],
   ): Promise<void> {
     try {
-      const interview = WarmupFirestore.fromRequest(
-        interviewId,
+      const interview = await this.firestoreService.getUserInterviewById(
         userId,
+        interviewId,
+      );
+
+      interview.questions = UserInterviewQuestionsDto.formAnswers(
+        interview.questions,
         warmup,
       );
-      await this.firestoreService.saveWarmup(userId, interviewId, interview);
+      interview.status = 'PROCESSING';
+
+      const interviews = await this.firestoreService.getUserInterviews(userId);
+
+      await this.firestoreService.setUserInterview(
+        userId,
+        UserInterviewsDto.toFirestore(
+          UserInterviewsDto.fromInterview(interviews, interview),
+        ),
+      );
       this.logger.info(`User ${userId} saved warmup ${interviewId}`);
 
       const resp = await fetch(
@@ -103,10 +145,10 @@ export class WarmupService {
         {
           method: 'POST',
           body: JSON.stringify({
-            questions: FeedbackQuestionsRequest.fromQuestionsFirestore(
-              interview.questions,
+            questions: FeedbackQuestionsRequest.fromUserInterviewQuestions(
+              interview.questions.questions,
             ),
-            interview_id: interviewId,
+            interview_id: interview.id,
             user_id: userId,
           }),
           headers: {

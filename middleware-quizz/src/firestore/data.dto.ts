@@ -1,4 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
+import {
+  InterviewFirestore,
+  InterviewQuestionFirestore,
+  UserFirestore,
+  UserInterviewQuestionFirestore,
+  UserInterviewFirestore,
+} from './firestore.schemas';
+import { QuestionWarmupRequestDto } from 'src/warmups/requests.dto';
 
 export class Path {
   segments: string[];
@@ -7,15 +15,17 @@ export class Interview {
   path: Path;
 }
 
-export class QuestionDto {
-  context: string;
-  question: string;
+export class UserInterviewQuestionDto {
   id: string;
+  question: string;
+  context: string;
   answer?: string;
   feedback?: string;
   score?: string;
 
-  static fromFirestore(data: any): QuestionDto {
+  static fromFirestore(
+    data: UserInterviewQuestionFirestore,
+  ): UserInterviewQuestionDto {
     return {
       context: data.context,
       question: data.question,
@@ -25,73 +35,137 @@ export class QuestionDto {
       score: data.score,
     };
   }
+
+  static toFirestore(
+    data: UserInterviewQuestionDto,
+  ): UserInterviewQuestionFirestore {
+    return {
+      question_id: data.id,
+      question: data.question,
+      context: data.context,
+      answer: data.answer,
+      feedback: data.feedback,
+      score: data.score,
+    };
+  }
 }
 
-export class WarmupDto {
-  @ApiProperty()
-  id: string;
+export class UserInterviewQuestionsDto {
+  questions: UserInterviewQuestionDto[];
 
-  @ApiProperty()
-  accessCode: string;
+  static fromFirestore(
+    data: UserInterviewQuestionFirestore[],
+  ): UserInterviewQuestionsDto {
+    return {
+      questions: data.map((question) =>
+        UserInterviewQuestionDto.fromFirestore(question),
+      ),
+    };
+  }
 
-  @ApiProperty()
-  title: string;
-
-  @ApiProperty()
-  status: string;
-
-  @ApiProperty()
-  role: string;
-
-  @ApiProperty()
-  level: string;
-
-  @ApiProperty()
-  questions: QuestionDto[];
-
-  static fromFirestore(data: any): WarmupDto {
-    return (
-      data && {
-        id: data.interview_id,
-        title: data.title,
-        accessCode: data.access_code,
-        status: data.status,
-        role: data.role,
-        level: data.level,
-        questions: data.questions?.map((question) =>
-          QuestionDto.fromFirestore(question),
-        ),
-      }
+  static toFirestore(
+    data: UserInterviewQuestionsDto,
+  ): UserInterviewQuestionFirestore[] {
+    return data.questions.map((question) =>
+      UserInterviewQuestionDto.toFirestore(question),
     );
   }
 
-  static toFirestore(data: WarmupDto): any {
+  static fromTemplateQuestions(
+    questions: TemplateQuestionDto[],
+  ): UserInterviewQuestionsDto {
     return {
-      interview_id: data.id,
-      title: data.title,
-      access_code: data.accessCode,
-      status: data.status,
-      role: data.role,
-      level: data.level,
-      questions: data.questions?.map((question) => ({
-        question_id: question.id,
+      questions: questions.map((question, index) => ({
+        id: `Q${index + 1}`,
         question: question.question,
-        context: question.context,
-        categories: question.categories,
+        context: question.skillName,
+        answer: question.answer,
       })),
     };
   }
 
-  static fromSavedData(data: any): WarmupDto {
+  static formAnswers(
+    questions: UserInterviewQuestionsDto,
+    answers: QuestionWarmupRequestDto[],
+  ): UserInterviewQuestionsDto {
+    return {
+      questions: questions.questions.map((question) => ({
+        ...question,
+        answer: answers.find((answer) => answer.questionId === question.id)
+          .answer,
+      })),
+    };
+  }
+}
+
+export class UserInterviewDto {
+  id: string;
+  title: string;
+  status: string;
+  role: string;
+  level: string;
+  questions: UserInterviewQuestionsDto;
+
+  static fromFirestore(data: UserInterviewFirestore): UserInterviewDto {
     return {
       id: data.interview_id,
       title: data.title,
-      accessCode: data.access_code,
+      status: data.status,
+      role: data.role,
+      level: data.level,
+      questions: UserInterviewQuestionsDto.fromFirestore(data.questions),
+    };
+  }
+
+  static toFirestore(data: UserInterviewDto): any {
+    return {
+      interview_id: data.id,
+      title: data.title,
+      status: data.status,
+      role: data.role,
+      level: data.level,
+      questions: UserInterviewQuestionsDto.toFirestore(data.questions),
+    };
+  }
+
+  static fromSavedData(data: any): UserInterviewDto {
+    return {
+      id: data.interview_id,
+      title: data.title,
       status: data.status,
       role: data.role,
       level: data.level,
       questions: data.questions?.map((question) =>
-        QuestionDto.fromFirestore(question),
+        UserInterviewQuestionDto.fromFirestore(question),
+      ),
+    };
+  }
+}
+
+export class UserInterviewsDto {
+  interviews: UserInterviewDto[];
+
+  static fromFirestore(data: UserInterviewFirestore[]): UserInterviewsDto {
+    return {
+      interviews: data.map((interview) =>
+        UserInterviewDto.fromFirestore(interview),
+      ),
+    };
+  }
+
+  static toFirestore(data: UserInterviewsDto): UserInterviewFirestore[] {
+    return data.interviews.map((interview) =>
+      UserInterviewDto.toFirestore(interview),
+    );
+  }
+
+  static fromInterview(
+    data: UserInterviewsDto,
+    interview: UserInterviewDto,
+  ): UserInterviewsDto {
+    return {
+      interviews: data.interviews.map((tInterview) =>
+        tInterview.id === interview.id ? interview : tInterview,
       ),
     };
   }
@@ -107,17 +181,24 @@ export class UserDto {
   @ApiProperty()
   lastName: string;
   @ApiProperty()
-  interviews: WarmupDto[];
+  interviews: UserInterviewsDto;
 
-  static fromFirestore(data: any, userId: string): UserDto {
+  static fromFirestore(data: UserFirestore, userId: string): UserDto {
     return {
       email: data.email,
       id: userId,
       firstName: data.first_name,
       lastName: data.last_name,
-      interviews: data.interviews?.map((interview) =>
-        WarmupDto.fromFirestore(interview),
-      ),
+      interviews: UserInterviewsDto.fromFirestore(data.interviews),
+    };
+  }
+
+  static toFirestore(data: UserDto): UserFirestore {
+    return {
+      email: data.email,
+      first_name: data.firstName,
+      last_name: data.lastName,
+      interviews: UserInterviewsDto.toFirestore(data.interviews),
     };
   }
 }
@@ -129,7 +210,7 @@ export class TemplateQuestionDto {
   skillName: string;
   answer: string;
 
-  static fromFirestore(data: any): TemplateQuestionDto {
+  static fromFirestore(data: InterviewQuestionFirestore): TemplateQuestionDto {
     return {
       question: data.question,
       devLevel: data.dev_level,
@@ -139,7 +220,7 @@ export class TemplateQuestionDto {
     };
   }
 
-  static toFirestore(data: TemplateQuestionDto): any {
+  static toFirestore(data: TemplateQuestionDto): InterviewQuestionFirestore {
     return {
       question: data.question,
       dev_level: data.devLevel,
@@ -150,34 +231,46 @@ export class TemplateQuestionDto {
   }
 }
 
-export class InterviewDto {
-  @ApiProperty()
-  id: string;
-  @ApiProperty()
-  title: string;
-  @ApiProperty()
+export class TemplateQuestionsDto {
   questions: TemplateQuestionDto[];
 
-  static fromFirestore(data: any, interviewId: string): InterviewDto {
+  static fromFirestore(
+    data: InterviewQuestionFirestore[],
+  ): TemplateQuestionsDto {
     return {
-      id: interviewId,
-      title: data.interview_title,
-      questions: data.questions?.map((interview) =>
-        TemplateQuestionDto.fromFirestore(interview),
+      questions: data.map((question) =>
+        TemplateQuestionDto.fromFirestore(question),
       ),
     };
   }
 
-  static toFirestore(data: InterviewDto): any {
+  static toFirestore(data: TemplateQuestionsDto): InterviewQuestionFirestore[] {
+    return data.questions.map((question) =>
+      TemplateQuestionDto.toFirestore(question),
+    );
+  }
+}
+
+export class InterviewDto {
+  id: string;
+  title: string;
+  questions: TemplateQuestionsDto;
+
+  static fromFirestore(
+    data: InterviewFirestore,
+    interviewId: string,
+  ): InterviewDto {
     return {
-      interview_id: data.id,
-      interview_title: data.title,
-      status: 'New',
-      level: 'Junior',
-      role: 'Developer',
-      questions: data.questions?.map((question) =>
-        TemplateQuestionDto.toFirestore(question),
-      ),
+      id: interviewId,
+      title: data.title,
+      questions: TemplateQuestionsDto.fromFirestore(data.questions),
+    };
+  }
+
+  static toFirestore(data: InterviewDto): InterviewFirestore {
+    return {
+      title: data.title,
+      questions: TemplateQuestionsDto.toFirestore(data.questions),
     };
   }
 
