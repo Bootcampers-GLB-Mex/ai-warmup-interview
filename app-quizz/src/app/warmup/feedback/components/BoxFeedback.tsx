@@ -17,11 +17,11 @@ export function BoxFeedback({ options }: BoxFeedbackProps) {
           className="p-10 bg-white mb-4 shadow-lg cursor-pointer"
         >
           <div>
-            <div className="pb-2 text-[#7C7C7C] text-xl">{option.question}</div>
-            <div className="text-sm w-10/12">Your Answer: {option.userAnswer}</div>
-            <div className="text-sm w-10/12">IA Answer: {option.correctAnswer}</div>
-            <div className="text-sm w-10/12">Feedback: {option.feedback}</div>
-            <div className="text-sm w-10/12">Score: {option.score}</div>
+            <div className="pb-2 mb-3 text-[#7C7C7C] text-xl">{option.question}</div>
+            <div className="text-sm mb-3 w-10/12"><span className="font-bold">Your Answer:</span> {option.userAnswer}</div>
+            <div className="text-sm mb-3 w-10/12"><span className="font-bold">IA Answer:</span> {option.correctAnswer}</div>
+            <div className="text-sm mb-3 w-10/12"><span className="font-bold">Feedback:</span> {option.feedback}</div>
+            <div className="text-sm w-10/12"><span className="font-bold">Score:</span> {option.score}</div>
           </div>
         </div>
       ))}

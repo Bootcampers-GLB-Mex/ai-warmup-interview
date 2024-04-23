@@ -18,11 +18,11 @@ export default function SignIn() {
     try {
       await setPersistence(auth, browserSessionPersistence);
       const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password)
-      await doLogin(JSON.stringify({
+      await doLogin({
         uid: userCredential.user.uid,
-        email: userCredential.user.email,
-        username: userCredential.user.displayName,
-      }));
+        email: userCredential.user.email || values.email,
+        username: userCredential.user.displayName || values.email,
+      });
     } catch (e: any) {
       const errorMessage = e.message;
       setErrors(errorMessage);

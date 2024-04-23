@@ -105,9 +105,4 @@ export class WarmupController {
   postWarmupFeedbackStatus(): WarmupsResponse {
     throw new Error('Not implemented');
   }
-
-  @Post('/:id/feedback')
-  postWarmupFeedback(): WarmupsResponse {
-    throw new Error('Not implemented');
-  }
 }

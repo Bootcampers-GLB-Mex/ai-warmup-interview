@@ -2,17 +2,21 @@
 
 import Button from "@/components/Button/button";
 import { useQuickQuizz } from "../question/context";
-import { use, useEffect, useState } from "react";
-import { PostDataQuestion, QuestionResponse, postData } from "../actions";
+import { useEffect, useState } from "react";
+import { PostDataQuestion, QuestionResponse } from "../actions";
 
-const btnStyle = "text-white-900  bg-white border border-teal-900 focus:outline-none hover:text-white rounded"
+const btnStyle = "text-gray-900 bg-white border border-white-900 focus:outline-none hover:text-green-500 rounded"
 
-export const QuizzForm = () => {
+export interface QuizzFormProps {
+  postData: (questions: PostDataQuestion[], interviewId: string) => void;
+}
+export const QuizzForm = ({ postData }: QuizzFormProps) => {
   const {
     currentQuestion,
     questions,
     answers,
     isFinalQuestion,
+    interviewId,
 
     setAnswers,
     setCurrentQuestion,
@@ -53,7 +57,7 @@ export const QuizzForm = () => {
         answer: answer,
       };
     });
-    postData(answersPostData, 'KSchtFol3eaEtLilJ3VJ', 'oCOsUxCdN0p2O5WAYGWS')
+    postData(answersPostData, interviewId)
   };
 
   const onEndForm = () => {
@@ -85,7 +89,7 @@ export const QuizzForm = () => {
       </div>
 
       <div className="flex flex-row text-l pt-8 pb-8 pl-10 pr-10 justify-end">
-        <Button className={btnStyle} onClick={onBack}>Back</Button>
+        <Button className="mx-2" variant="secondary" onClick={onBack}>Back</Button>
         <Button onClick={!isFinalQuestion ? onNextQuestion : onEndForm}>Next</Button>
       </div>
     </div>

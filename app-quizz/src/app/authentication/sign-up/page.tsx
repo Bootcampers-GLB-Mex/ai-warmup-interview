@@ -18,7 +18,6 @@ const SignUp = () => {
       const userCredential = await createUserWithEmailAndPassword(
         auth, values.email, values.password);
       const user = userCredential.user;
-      console.log(user, 'The following is the representation of our user.');
       router.push('/authentication/sign-in');
     } catch (e: any) {
       const errorMessage = e.message;

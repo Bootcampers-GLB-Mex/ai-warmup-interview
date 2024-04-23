@@ -5,6 +5,7 @@ import { QuestionResponse } from "../actions";
 
 interface QuickQuizzContextValue {
   currentQuestion: number;
+  interviewId: string;
   isFinalQuestion: boolean;
   setCurrentQuestion: (question: number) => void;
   questions: QuestionResponse[];
@@ -14,6 +15,7 @@ interface QuickQuizzContextValue {
 }
 const QuickQuizzContext = createContext<QuickQuizzContextValue>({
   currentQuestion: 0,
+  interviewId: '',
   isFinalQuestion: true,
   setCurrentQuestion: () => {},
   questions: [],
@@ -27,9 +29,10 @@ export const useQuickQuizz = () => {
 };
 export interface QuickQuizzProviderProps {
   questions: QuestionResponse[];
+  interviewId: string;
   children: React.ReactNode;
 }
-export const QuickQuizzProvider = ({ children, questions }: QuickQuizzProviderProps) => {
+export const QuickQuizzProvider = ({ children, questions, interviewId }: QuickQuizzProviderProps) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [tQuestions, setQuestions] = useState<QuestionResponse[]>(questions);
   const [answers, setAnswers] = useState<string[]>([]);
@@ -60,6 +63,7 @@ export const QuickQuizzProvider = ({ children, questions }: QuickQuizzProviderPr
   return (
     <QuickQuizzContext.Provider value={{
       currentQuestion,
+      interviewId,
       isFinalQuestion: tQuestions.length === currentQuestion + 1,
       setCurrentQuestion: wrapSetCurrentQuestion,
       questions: tQuestions,

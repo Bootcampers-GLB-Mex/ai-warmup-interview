@@ -7,8 +7,8 @@ export default async function Question() {
   return (
     <>
     <div className="md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-teal-100">
-      <QuickQuizzProvider questions={interview.questions.questions}>
-        <QuizzForm />
+      <QuickQuizzProvider interviewId={interview.id} questions={interview.questions.questions}>
+        <QuizzForm postData={postData} />
       </QuickQuizzProvider>
     </div>
     </>

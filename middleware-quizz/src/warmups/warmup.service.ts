@@ -31,12 +31,17 @@ export class WarmupService {
   }
 
   async getUserWarmups(userId: string): Promise<UserInterviewsDto> {
-    const userInterviews =
-      await this.firestoreService.getUserInterviews(userId);
-    this.logger.info(
-      `User ${userId} has ${userInterviews.interviews.length} warmups`,
-    );
-    return userInterviews;
+    try {
+      const userInterviews =
+        await this.firestoreService.getUserInterviews(userId);
+      this.logger.info(
+        `User ${userId} has ${userInterviews.interviews.length} warmups`,
+      );
+      return userInterviews;
+    } catch (error) {
+      this.logger.error(error);
+      return { interviews: [] };
+    }
   }
 
   async getCompletedWarmups(userId: string): Promise<UserInterviewsDto> {

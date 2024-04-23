@@ -1,13 +1,12 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { encrypt } from "./lib";
 import { redirect } from "next/navigation";
 
-export async function doLogin(data: string) {
+export async function doLogin(data: { uid: string; email: string; username: string }) {
   try {
   const expires = new Date(Date.now() + 60 * (60 * 1000));
-  const session = await encrypt({ data, expires });
+  const session = btoa(JSON.stringify({ user: data, expires }));
 
   // Save the session in a cookie
   cookies().set("session", session, { expires, httpOnly: true });
