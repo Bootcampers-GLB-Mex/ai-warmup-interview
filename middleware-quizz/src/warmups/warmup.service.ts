@@ -44,6 +44,17 @@ export class WarmupService {
     }
   }
 
+  async getStatusUserWarmup(
+    useerId: string,
+    interviewId: string,
+  ): Promise<UserInterviewDto> {
+    const interviews = await this.firestoreService.getUserInterviews(useerId);
+    const filterByid = interviews.interviews.filter(
+      (interview) => interview.id === interviewId,
+    );
+    return filterByid[0];
+  }
+
   async getCompletedWarmups(userId: string): Promise<UserInterviewsDto> {
     const completedInterviews =
       await this.firestoreService.getCompletedWarmups(userId);
@@ -53,7 +64,7 @@ export class WarmupService {
     return completedInterviews;
   }
 
-  getWarmupById(
+  async getWarmupById(
     userId: string,
     interviewId: string,
   ): Promise<UserInterviewDto> {

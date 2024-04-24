@@ -1,9 +1,10 @@
 'use client'
 
 import Button from "@/components/Button/button";
-import { useQuickQuizz } from "../question/context";
+import { useQuickQuizz } from "../context";
 import { useEffect, useState } from "react";
 import { PostDataQuestion, QuestionResponse } from "../actions";
+import { useRouter } from "next/navigation";
 
 const btnStyle = "text-gray-900 bg-white border border-white-900 focus:outline-none hover:text-green-500 rounded"
 
@@ -23,6 +24,7 @@ export const QuizzForm = ({ postData }: QuizzFormProps) => {
   } = useQuickQuizz();
 
   const [userAnswer, setUserAnswer] = useState("")
+  const router = useRouter();
 
   const onNextQuestion = () => {
     if (currentQuestion === questions.length - 1) {
@@ -58,10 +60,12 @@ export const QuizzForm = ({ postData }: QuizzFormProps) => {
       };
     });
     postData(answersPostData, interviewId)
+
   };
 
   const onEndForm = () => {
     requestFeedback([...answers, userAnswer], questions)
+    router.push(`/interview/pending/${interviewId}`)
   }
 
   useEffect(() => {

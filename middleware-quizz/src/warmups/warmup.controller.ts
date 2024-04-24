@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { WarmupsResponse } from './responses.schema';
 import { WarmupService } from './warmup.service';
 import { ApiQuery, ApiResponse } from '@nestjs/swagger';
@@ -99,10 +99,5 @@ export class WarmupController {
     @Body('userId') userId: string,
   ) {
     this.warmupService.saveUserWarmup(userId, interviewId, questions);
-  }
-
-  @Post('/:id/feedback/status')
-  postWarmupFeedbackStatus(): WarmupsResponse {
-    throw new Error('Not implemented');
   }
 }

@@ -1,6 +1,6 @@
 import { fetchData, postData } from "./actions";
 import { QuizzForm } from "./components/quizz-form";
-import { QuickQuizzProvider } from "./question/context";
+import { QuickQuizzProvider } from "./context";
 
 export default async function Question() {
   const interview = await fetchData();

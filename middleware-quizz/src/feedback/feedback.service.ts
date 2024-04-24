@@ -26,6 +26,8 @@ export class FeedbackService {
         createFeedbackDto.interviewId,
       );
 
+      interview.status = 'COMPLETED';
+
       interview.questions = UserInterviewQuestionsDto.fromFeedback(
         interview.questions,
         createFeedbackDto.feedback,

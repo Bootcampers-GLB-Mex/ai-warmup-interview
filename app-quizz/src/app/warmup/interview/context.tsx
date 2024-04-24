@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { QuestionResponse } from "../actions";
+import { QuestionResponse } from "./actions";
 
 interface QuickQuizzContextValue {
   currentQuestion: number;
