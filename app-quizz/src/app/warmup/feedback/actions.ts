@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import { InterviewResponse } from "../interview/actions";
 
 
@@ -9,7 +10,10 @@ export interface QuestionResponse {
   context: string;
   userAnswer: string;
 }
-export async function fetchFeedback(userId: string, interviewId: string): Promise<QuestionResponse[]> {
+export async function fetchFeedback(interviewId: string): Promise<QuestionResponse[]> {
+  const cookieSession = cookies().get('session')?.value;
+  const session = JSON.parse(atob(cookieSession!));
+  const userId = session.user.uid;
   const response = await fetch(
     `http://localhost:3003/interviews/interview-id?userId=${userId}&interviewId=${interviewId}`
   );

@@ -1,25 +1,32 @@
+import Button from "@/components/Button/button";
 import { info } from "console";
+import Link from "next/link";
 
 export interface InterviewDescriptionProps {
   title: string;
+  id: string;
   info: string[];
 }
 
 export const InterviewDescription = ({
   title,
+  id,
   info
 }: InterviewDescriptionProps) => {
   return (
-    <div className="mt-6 border-t border-gray-100">
-      <dl className="divide-y divide-gray-100">
-        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt className="text-sm font-med" leading-6 text-gray900>{title}</dt>
-          <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-            <div className="grid grid-cols-3 divide-x divide-gray-600">
+    <div className="mt-6 mb-6 border-b border-gray-300">
+      <dl className="divide-y divide-gray-300">
+        <div className="px-4 py-3 flex justify-between items-center">
+          <dt className="text-sm font-med font-semibold" leading-6 text-gray900>{title}</dt>
+          <dd className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0">
+            <div className="flex divide-x divide-gray-300">
               {info.map((item) => (
-                <div>{item}</div>
+                <div className="text-center text-gray-500 px-2">{item}</div>
               ))}
             </div>
+          </dd>
+          <dd>
+            <Link className="text-green-500 hover:text-green-900" href={`/warmup/feedback/${id}`}>See feedback</Link>
           </dd>
         </div>
       </dl>

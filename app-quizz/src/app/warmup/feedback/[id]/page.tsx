@@ -1,10 +1,17 @@
-import { BoxFeedback, Options } from "./components/BoxFeedback";
-import { fetchFeedback } from "./actions";
+import { BoxFeedback, Options } from "../components/BoxFeedback";
+import { fetchFeedback } from "../actions";
 
 const bodyContainerStyles =
     "md:container md:mx-auto min-h-full ml-4 mr-4 pt-32 bg-gray-50 pb-20";
-export default async function Feedback() {
-  const feedbacks = await fetchFeedback("oCOsUxCdN0p2O5WAYGWS", "KSchtFol3eaEtLilJ3VJ")
+
+export interface FeedbackProps {
+  params: {
+    id : string
+  };
+}
+export default async function Feedback({ params }: FeedbackProps) {
+  console.log('params: ', params)
+  const feedbacks = await fetchFeedback(params.id)
   const options = feedbacks.map((feedback) => {
     return {
       question: feedback.question,
@@ -23,12 +30,6 @@ export default async function Feedback() {
         <div className="flex flex-column  pt-8 pb-8 pl-10 pr-10">
           <BoxFeedback options={options} />
         </div>
-        {/* <div className="float-right pr-10">
-          <Button
-            title="Download"
-            onClick={() => handlerButton()}
-          ></Button>
-        </div> */}
       </div>
     </>
   );
