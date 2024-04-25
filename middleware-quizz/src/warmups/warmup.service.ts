@@ -117,7 +117,7 @@ export class WarmupService {
       getRandomElements(interviewTemplate.questions.questions),
     );
     const interview = new UserInterviewDto();
-    interview.id = 'KSchtFol3eaEtLilJ3VJ';
+    interview.id = `${Date.now()}`;
     interview.title = 'Senior Developer';
     interview.status = 'NEW';
     interview.role = 'Developer';
